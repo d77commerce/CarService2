@@ -24,14 +24,41 @@ namespace CarService2
             InitializeComponent();
         }
 
-        private void Find_byReg_Copy_Click(object sender, RoutedEventArgs e)
-        {
 
-        }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void Full_info_Click(object sender, RoutedEventArgs e)
+        {
+            var car = new Car()
+            {
+                Make = make_car_textBox.Text,
+                RegistrationNumber = reg_car_textBox.Text,
+                
+
+            };
+        }
+
+        private void Add_customer_Click(object sender, RoutedEventArgs e)
+        {
+            var customer = new Cuctomer();
+            var customerAdd = new CustomerAdd()
+            {
+                Id = 1,
+                FullName = "John Doe",
+                PhoneNumber = "0777777",
+                Email = "john.doe@example.com",
+                CompanyName = "Onyx"
+            };
+            customer.customer_Id.Text = customerAdd.Id.ToString();
+            customer.customer_full_name.Text= customerAdd.FullName.ToString();
+            customer.customer_phone_No.Text = customerAdd.PhoneNumber.ToString();
+            customer.customer_email.Text = customerAdd.Email.ToString();
+            customer.customer_company_name.Text = customerAdd.CompanyName.ToString();
+            customer.Show();
         }
     }
 }

@@ -9,10 +9,25 @@
 
   <ItemGroup>
     <None Remove="534-5340235_tequila-clipart.png" />
+    <None Remove="car-soft.bmp" />
+    <None Remove="PhotoRoom_20200618_144239_second-removebg-preview.png" />
+    <None Remove="Setings.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AngleSharp" Version="1.0.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="534-5340235_tequila-clipart.png" />
+    <Resource Include="car-soft.bmp" />
+    <Resource Include="PhotoRoom_20200618_144239_second-removebg-preview.png" />
+    <Resource Include="Setings.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="HtmlAddJson\" />
   </ItemGroup>
 
 </Project>
