@@ -1,6 +1,12 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
 using System.Windows;
 using System.Windows.Threading;
+using CarService2.Classes;
+using CarService2.DB;
+using Microsoft.EntityFrameworkCore;
 using static ConvertToHtml;
 
 namespace CarService2
@@ -10,12 +16,14 @@ namespace CarService2
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        private CarContext  _dbContext = new CarContext(new DbContextOptions<CarContext>());
+       
         public MainWindow()
         {
             InitializeComponent();
 
-
+           
+            
         }
         private void mine_windouw_Loaded(object sender, RoutedEventArgs e)
         {
@@ -67,6 +75,49 @@ namespace CarService2
 
             ConvertJsonToHtmlAndSave(jsonData, folderPath, Reg_No);
 
+        }
+
+        private void Find_full_car_history_Click(object sender, RoutedEventArgs e)
+        {
+            var allCars = _dbContext.Cars.ToList();
+
+            if (allCars.Count > 0)
+            {
+                // Build the message using StringBuilder
+                StringBuilder message = new StringBuilder();
+                foreach (var car in allCars)
+                {
+                    message.AppendLine($"Car Reg No: {car.RegistrationNumber}" +
+                                       $"\nMake: {car.Make}" +
+                                       $"\nColour: {car.Colour}" +
+                                       $"\nEngine Capacity: {car.EngineCapacity}\n");
+                }
+
+                // Display the message in a MessageBox
+                MessageBox.Show(message.ToString(), "All Cars Information");
+            }
+            else
+            {
+                MessageBox.Show("No cars found in the database.", "Information");
+            }
+            string registrationNumber = regNo_full_history.Text;
+
+            // Find the car by registration number
+          
+            var foundCar = _dbContext.Cars.FirstOrDefault(c => c.RegistrationNumber == registrationNumber);
+
+            if (foundCar != null)
+            {
+                // Display car information
+                MessageBox.Show($"Car Reg No: {foundCar.RegistrationNumber}" +
+                                    $"\nMake: {foundCar.Make}" +
+                                    $"\nColour: {foundCar.Colour}" +
+                                    $"\nEngine Capacity: {foundCar.EngineCapacity}");
+            }
+            else
+            {
+                MessageBox.Show("Car not found.");
+            }
         }
     }
 }

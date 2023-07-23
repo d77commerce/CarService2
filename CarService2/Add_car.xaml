@@ -28,7 +28,7 @@
             </Rectangle>
 
             <Label Content="reg No" HorizontalAlignment="Left" Margin="85,104,0,0" VerticalAlignment="Top" Height="45" Width="75" Foreground="#FF3C0C0C" FontSize="20"/>
-            <TextBox x:Name="reg_car_textBox" HorizontalAlignment="Left" Margin="185,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" Height="30" Foreground="#FF0A0303" Background="#FFEDDE38" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold" Text="" TextChanged="TextBox_TextChanged"/>
+            <TextBox x:Name="reg_car_textBox" HorizontalAlignment="Left" Margin="185,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" Height="30" Foreground="#FF0A0303" Background="#FFEDDE38" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold" Text="" />
             <TextBox x:Name="make_car_textBox" HorizontalAlignment="Left" Margin="185,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="30" Foreground="#FF0A0303" Background="#FFF9DFDF" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold"/>
             <Label Content="make" HorizontalAlignment="Left" Margin="82,152,0,0" VerticalAlignment="Top" Height="45" Width="75" Foreground="#FF3C0C0C" FontSize="20"/>
             <Label Content="model" HorizontalAlignment="Left" Margin="82,200,0,0" VerticalAlignment="Top" Height="45" Width="75" Foreground="#FF3C0C0C" FontSize="20"/>

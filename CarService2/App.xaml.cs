@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using SQLitePCL;
 
 namespace CarService2
 {
@@ -13,5 +14,9 @@ namespace CarService2
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+            SQLitePCL.Batteries.Init();
+        }
     }
 }

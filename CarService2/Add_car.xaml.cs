@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using CarService2.Classes;
 
 namespace CarService2
 {
@@ -26,20 +27,25 @@ namespace CarService2
 
 
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
+       
 
         private void Full_info_Click(object sender, RoutedEventArgs e)
         {
-            var car = new Car()
+            int customerId = 1;
+            if (customer_fullName_car == null)
             {
-                Make = make_car_textBox.Text,
-                RegistrationNumber = reg_car_textBox.Text,
-                
+                customerId = 1;
+            }
+            else
+            {
+                //to do
+            }
+            
+            string regNo = reg_car_textBox.Text;
+            string folderPhat = ".//HtmlAddClass//";
+          ClassToHtml.ConvertClassToHtmlAndSave(folderPhat,regNo,customerId);
 
-            };
+
         }
 
         private void Add_customer_Click(object sender, RoutedEventArgs e)
