@@ -73,12 +73,13 @@ namespace CarService2
 
             string folderPath = "C:\\Users\\d77co\\Source\\Repos\\d77commerce\\CarService2\\CarService2\\HtmlAddJson\\"; // Provide the desired folder path here
 
-            ConvertJsonToHtmlAndSave(jsonData, folderPath, Reg_No);
+            ConvertJsonToHtml(jsonData, Reg_No);
 
         }
 
         private void Find_full_car_history_Click(object sender, RoutedEventArgs e)
         {
+            _dbContext.Database.OpenConnection();
             var allCars = _dbContext.Cars.ToList();
 
             if (allCars.Count > 0)

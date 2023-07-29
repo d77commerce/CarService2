@@ -49,7 +49,7 @@
                     <ImageBrush ImageSource="534-5340235_tequila-clipart.png" Stretch="UniformToFill"/>
                 </Button.Background>
             </Button>
-            <Label Content="full info" HorizontalAlignment="Left" Margin="110,345,0,0" VerticalAlignment="Top" Height="46" Width="90" Foreground="#FF3C0C0C" FontSize="20"/>
+            <Label Content="info" HorizontalAlignment="Left" Margin="110,345,0,0" VerticalAlignment="Top" Height="46" Width="90" Foreground="#FF3C0C0C" FontSize="20"/>
             <Label Content="Customer :" HorizontalAlignment="Left" Margin="85,70,0,0" VerticalAlignment="Top" Height="46" Width="106" Foreground="#FF3C0C0C" FontSize="20"/>
             <Label Content="model" HorizontalAlignment="Left" Margin="82,200,0,0" VerticalAlignment="Top" Height="45" Width="75" Foreground="#FF3C0C0C" FontSize="20"/>
             <Rectangle HorizontalAlignment="Left" Height="46" Margin="322,346,0,0" Stroke="Black" VerticalAlignment="Top" Width="220" Fill="#FFF9DFDF"/>

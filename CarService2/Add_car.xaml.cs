@@ -20,31 +20,26 @@ namespace CarService2
     /// </summary>
     public partial class Add_car : Window
     {
+        private DvlaCarModel dvlaCarModel;
         public Add_car()
         {
             InitializeComponent();
+            dvlaCarModel = new DvlaCarModel();
         }
 
 
 
        
 
-        private void Full_info_Click(object sender, RoutedEventArgs e)
-        {
-            int customerId = 1;
-            if (customer_fullName_car == null)
-            {
-                customerId = 1;
-            }
-            else
-            {
-                //to do
-            }
-            
+        private async void Full_info_Click(object sender, RoutedEventArgs e)
+        {   
             string regNo = reg_car_textBox.Text;
-            string folderPhat = ".//HtmlAddClass//";
-          ClassToHtml.ConvertClassToHtmlAndSave(folderPhat,regNo,customerId);
+            string response = await dvlaCarModel.MakeApiRequest(regNo);
+            var htmlDvlaModel = ConvertToHtml.ConvertJsonToHtml(response, regNo);
 
+            ShowDvlaModel dvla = new ShowDvlaModel();
+               dvla.Show();
+            dvla.Display(htmlDvlaModel);
 
         }
 
