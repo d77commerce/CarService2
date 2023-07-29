@@ -16,7 +16,7 @@ namespace CarService2.Classes
         {
             RegistrationNumber = regNo;
         }
-         [Key]
+        
         public int Id { get; set; }
         public string RegistrationNumber { get; set; }
         public string ArtEndDate { get; set; } = "Pending";

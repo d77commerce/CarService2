@@ -4,20 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CarService2.Classes;
+using CarService2.DB;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CarService2.Configurations
 {
-    public class CarConfiguration : IEntityTypeConfiguration<Car>
+    public class CarConfiguration : IEntityTypeConfiguration<CarDb>
     {
-        public void Configure(EntityTypeBuilder<Car> builder)
+        public void Configure(EntityTypeBuilder<CarDb> builder)
         {
-            builder.HasData(new Car
+            builder.HasData(new CarDb
             {
                 Id = 1,
-                RegistrationNumber = "111111",
-                Colour = "Red"
+                RegistrationNumber = "11111",
+                Make = "Fiat",
+                Colour = "Red",
+                EngineCapacity = 2000,
+                FuelType = "Petrol",
+                MonthOfFirstRegistration = "March,2000",
+               CustomerId = 1
+
             });
 
         }

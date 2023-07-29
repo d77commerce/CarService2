@@ -16,14 +16,11 @@ namespace CarService2
     /// </summary>
     public partial class MainWindow : Window
     {
-        private CarContext  _dbContext = new CarContext(new DbContextOptions<CarContext>());
-       
+        private CarContext _dbContext = new CarContext(new DbContextOptions<CarContext>());
+
         public MainWindow()
         {
             InitializeComponent();
-
-           
-            
         }
         private void mine_windouw_Loaded(object sender, RoutedEventArgs e)
         {
@@ -40,10 +37,13 @@ namespace CarService2
             var regNo = reg_No_filld;
             if (regNo != null)
             {
-
+                CarServiceNew.CarServiceByReg(regNo.Text, customerId);
+            }
+            else
+            {
+                MessageBox.Show("Reg Number is not valid!");
             }
 
-            CarServiseNew.CarServiseByNomber(regNo.Text, customerId);
         }
 
         private void TextBox_TextChanged(object? sender, EventArgs eventArgs)
@@ -82,29 +82,11 @@ namespace CarService2
             _dbContext.Database.OpenConnection();
             var allCars = _dbContext.Cars.ToList();
 
-            if (allCars.Count > 0)
-            {
-                // Build the message using StringBuilder
-                StringBuilder message = new StringBuilder();
-                foreach (var car in allCars)
-                {
-                    message.AppendLine($"Car Reg No: {car.RegistrationNumber}" +
-                                       $"\nMake: {car.Make}" +
-                                       $"\nColour: {car.Colour}" +
-                                       $"\nEngine Capacity: {car.EngineCapacity}\n");
-                }
-
-                // Display the message in a MessageBox
-                MessageBox.Show(message.ToString(), "All Cars Information");
-            }
-            else
-            {
-                MessageBox.Show("No cars found in the database.", "Information");
-            }
+         
             string registrationNumber = regNo_full_history.Text;
 
             // Find the car by registration number
-          
+
             var foundCar = _dbContext.Cars.FirstOrDefault(c => c.RegistrationNumber == registrationNumber);
 
             if (foundCar != null)
@@ -113,12 +95,15 @@ namespace CarService2
                 MessageBox.Show($"Car Reg No: {foundCar.RegistrationNumber}" +
                                     $"\nMake: {foundCar.Make}" +
                                     $"\nColour: {foundCar.Colour}" +
-                                    $"\nEngine Capacity: {foundCar.EngineCapacity}");
+                                    $"\nEngine Capacity: {foundCar.EngineCapacity}" +
+                                    $"\nFuel Type: {foundCar.FuelType}" +
+                                    $"\nFirst Reg : {foundCar.MonthOfFirstRegistration}");
             }
             else
             {
                 MessageBox.Show("Car not found.");
             }
+            _dbContext.Database.CloseConnection();
         }
     }
 }

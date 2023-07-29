@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -25,11 +26,9 @@ namespace CarService2
         {
             InitializeComponent();
             dvlaCarModel = new DvlaCarModel();
+           
         }
 
-
-
-       
 
         private async void Full_info_Click(object sender, RoutedEventArgs e)
         {   
@@ -40,6 +39,7 @@ namespace CarService2
             ShowDvlaModel dvla = new ShowDvlaModel();
                dvla.Show();
             dvla.Display(htmlDvlaModel);
+          
 
         }
 
@@ -61,5 +61,6 @@ namespace CarService2
             customer.customer_company_name.Text = customerAdd.CompanyName.ToString();
             customer.Show();
         }
+
     }
 }

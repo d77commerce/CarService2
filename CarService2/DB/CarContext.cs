@@ -22,12 +22,13 @@ namespace CarService2.DB
             
         }
 
-        public DbSet<Car> Cars { get; set; }
+        public DbSet<CarDb> Cars { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
             optionsBuilder.UseSqlite("Data Source=car_database.db");
+          
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
