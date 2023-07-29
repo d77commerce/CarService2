@@ -80,7 +80,7 @@ namespace CarService2
         private void Find_full_car_history_Click(object sender, RoutedEventArgs e)
         {
             _dbContext.Database.OpenConnection();
-            var allCars = _dbContext.Cars.ToList();
+          //  var allCars = _dbContext.Cars.ToList();
 
          
             string registrationNumber = regNo_full_history.Text;
