@@ -12,11 +12,6 @@ namespace CarService2.Classes
     {
         public Car() { }
 
-        public Car(string regNo)
-        {
-            RegistrationNumber = regNo;
-        }
-        
         public int Id { get; set; }
         public string RegistrationNumber { get; set; }
         public string ArtEndDate { get; set; } = "Pending";

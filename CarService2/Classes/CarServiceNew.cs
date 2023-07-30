@@ -9,11 +9,11 @@ namespace CarService2.Classes
     public class CarServiceNew
     {
         private static CarContext dbContext = new CarContext(new DbContextOptions<CarContext>());
-       
+
 
         public static void CarServiceByReg(string regNo, int customerId)
         {
-            var car = new Car(regNo);
+            var car = new Car();
             dbContext.Database.OpenConnection();
             var foundCar = dbContext.Cars.FirstOrDefault(c => c.RegistrationNumber == regNo);
 
@@ -67,10 +67,12 @@ namespace CarService2.Classes
             else
             {
                 MessageBox.Show("***** Car is non exist in Database. *****");
-               // Add_car add = new Add_car();
-               FullDvlaInfo add = new FullDvlaInfo();
-               add.FullDvlaInfoOne(car.RegistrationNumber);
+                // Add_car add = new Add_car();
+                FullDvlaInfo add = new FullDvlaInfo();
+                add.FullDvlaInfoOne(regNo);
             }
+
+
             /*var customer = new CustomerAdd()
             {
                 Id = customerId,
@@ -81,7 +83,7 @@ namespace CarService2.Classes
             };*/
 
 
-           // var car = new Car(regNo);
+            // var car = new Car(regNo);
             /*var addCar = new Add_car
             {
                 reg_car_textBox =
@@ -111,7 +113,7 @@ namespace CarService2.Classes
             }
             addCar.Show();*/
         }
-       
+
     }
 
 }

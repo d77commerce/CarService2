@@ -30,7 +30,7 @@ namespace CarService2.Classes
 
 
 
-            var car = new Car(regNo);
+            var car = new Car();
 
             Directory.CreateDirectory(folderPath);
 
