@@ -23,6 +23,7 @@ namespace CarService2.DB
         }
 
         public DbSet<CarDb> Cars { get; set; }
+        public DbSet<CustomerDb> Customers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -35,6 +36,7 @@ namespace CarService2.DB
         {
             // Seed data for the Cars table
             modelBuilder.ApplyConfiguration(new CarConfiguration());
+            modelBuilder.ApplyConfiguration(new CustomerConfiguration());
             base.OnModelCreating(modelBuilder);
         }
         /*protected override void OnModelCreating(ModelBuilder modelBuilder)

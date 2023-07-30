@@ -28,10 +28,10 @@
             </Rectangle>
 
             <Label Content="reg No" HorizontalAlignment="Left" Margin="85,104,0,0" VerticalAlignment="Top" Height="45" Width="75" Foreground="#FF3C0C0C" FontSize="20"/>
-            <TextBox x:Name="reg_car_textBox" HorizontalAlignment="Left" Margin="185,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" Height="30" Foreground="#FF0A0303" Background="#FFEDDE38" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold" Text="" />
+            <TextBox x:Name="reg_car_textBox" CharacterCasing="Upper" HorizontalAlignment="Left" Margin="185,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" Height="30" Foreground="#FF0A0303" Background="#FFEDDE38" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold" Text="" />
             <TextBox x:Name="make_car_textBox" HorizontalAlignment="Left" Margin="185,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="30" Foreground="#FF0A0303" Background="#FFF9DFDF" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold"/>
             <Label Content="make" HorizontalAlignment="Left" Margin="82,153,0,0" VerticalAlignment="Top" Height="45" Width="75" Foreground="#FF3C0C0C" FontSize="20"/>
-            <Label Content="model" HorizontalAlignment="Left" Margin="82,200,0,0" VerticalAlignment="Top" Height="45" Width="75" Foreground="#FF3C0C0C" FontSize="20"/>
+            <Label Content="Colour" HorizontalAlignment="Left" Margin="82,200,0,0" VerticalAlignment="Top" Height="45" Width="75" Foreground="#FF3C0C0C" FontSize="20"/>
             <Label Content="fuelType" HorizontalAlignment="Left" Margin="85,245,0,0" VerticalAlignment="Top" Height="45" Width="85" Foreground="#FF3C0C0C" FontSize="20"/>
             <Label Content="First Reg" HorizontalAlignment="Left" Margin="323,249,0,0" VerticalAlignment="Top" Height="44" Width="118" Foreground="#FF3C0C0C" FontSize="20"/>
             <TextBox x:Name="model_car_textBox" HorizontalAlignment="Left" Margin="185,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="30" Foreground="#FF0A0303" Background="#FFF9DFDF" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold"/>
@@ -51,9 +51,8 @@
             </Button>
             <Label Content="info" HorizontalAlignment="Left" Margin="110,345,0,0" VerticalAlignment="Top" Height="46" Width="90" Foreground="#FF3C0C0C" FontSize="20"/>
             <Label Content="Customer :" HorizontalAlignment="Left" Margin="85,70,0,0" VerticalAlignment="Top" Height="46" Width="106" Foreground="#FF3C0C0C" FontSize="20"/>
-            <Label Content="model" HorizontalAlignment="Left" Margin="82,199,0,0" VerticalAlignment="Top" Height="45" Width="75" Foreground="#FF3C0C0C" FontSize="20"/>
             <Rectangle HorizontalAlignment="Left" Height="46" Margin="322,346,0,0" Stroke="Black" VerticalAlignment="Top" Width="220" Fill="#FFF9DFDF"/>
-            <Button x:Name="customer_company_name" HorizontalAlignment="Left" Margin="458,351,0,0" VerticalAlignment="Top" Height="30" Width="70" Content="Add" FontWeight="Bold" FontSize="20" Background="White" Click="Add_customer_Click">
+            <Button x:Name="add_customer" HorizontalAlignment="Left" Margin="458,351,0,0" VerticalAlignment="Top" Height="30" Width="70" Content="Add" FontWeight="Bold" FontSize="20" Background="White" Click="Add_customer_Click">
                 <Button.BorderBrush>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black"/>
@@ -92,10 +91,10 @@
                 </Button.BorderBrush>
             </Button>
             <Label x:Name="customer_fullName_car" Content="" HorizontalAlignment="Left" Margin="206,70,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Width="144"/>
-            <Label Content="Colour" HorizontalAlignment="Left" Margin="323,155,0,0" VerticalAlignment="Top" Height="45" Width="76" Foreground="#FF3C0C0C" FontSize="20"/>
+            <Label Content="model" HorizontalAlignment="Left" Margin="323,155,0,0" VerticalAlignment="Top" Height="45" Width="76" Foreground="#FF3C0C0C" FontSize="20"/>
             <TextBox x:Name="make_car_textBox_Copy" HorizontalAlignment="Left" Margin="432,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="30" Foreground="#FF0A0303" Background="#FFF9DFDF" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold"/>
-            <TextBox x:Name="make_car_textBox_Copy1" HorizontalAlignment="Left" Margin="432,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" Height="30" Foreground="#FF0A0303" Background="#FFF9DFDF" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold"/>
-            <Label Content="Engine cm2" HorizontalAlignment="Left" Margin="322,201,0,0" VerticalAlignment="Top" Height="46" Width="119" Foreground="#FF3C0C0C" FontSize="20"/>
+            <TextBox x:Name="engine_textBox" HorizontalAlignment="Left" Margin="432,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" Height="30" Foreground="#FF0A0303" Background="#FFF9DFDF" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold" />
+            <Label Content="Engine cm3" HorizontalAlignment="Left" Margin="322,201,0,0" VerticalAlignment="Top" Height="46" Width="119" Foreground="#FF3C0C0C" FontSize="20"/>
 
         </Grid>
 

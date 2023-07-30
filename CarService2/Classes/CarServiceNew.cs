@@ -56,6 +56,10 @@ namespace CarService2.Classes
                     year_car_textBox =
                     {
                         Text = foundCar.MonthOfFirstRegistration.ToString()
+                    },
+                    engine_textBox =
+                    {
+                        Text = foundCar.EngineCapacity.ToString()
                     }
                 };
                 if (car.CustomerId == 1)
@@ -71,7 +75,7 @@ namespace CarService2.Classes
                 FullDvlaInfo add = new FullDvlaInfo();
                 add.FullDvlaInfoOne(regNo);
             }
-
+            dbContext.Database.CloseConnection();
 
             /*var customer = new CustomerAdd()
             {

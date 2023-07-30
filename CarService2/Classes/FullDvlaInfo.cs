@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using CarService2.DB;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,14 +21,18 @@ namespace CarService2.Classes
             dvlaCarModel = new DvlaCarModel();
 
         }
-        public async void FullDvlaInfoOne(string Reg)
+        public async void FullDvlaInfoOne(string reg)
         {
-            string regNo = Reg;
+            string regNo = reg;
             var response3 = await dvlaCarModel.MakeApiRequest(regNo);
 
             //  JObject jsonObject = JObject.Parse(response3);
             // var htmlDvlaModel = ConvertToHtml.ConvertJsonToHtml(response3, regNo);
-
+            if (response3 == null)
+            {
+                MessageBox.Show("Not found in DVLA Database !");
+                return;
+            }
 
             var obj = JsonConvert.DeserializeObject<Car>(response3);
             int idOfCustomer = 1;
@@ -53,6 +58,10 @@ namespace CarService2.Classes
                 year_car_textBox =
                 {
                     Text = obj.MonthOfFirstRegistration.ToString()
+                },
+                engine_textBox =
+                {
+                    Text= obj.EngineCapacity.ToString()
                 }
             };
             addCar.Show();
@@ -74,12 +83,9 @@ namespace CarService2.Classes
 
                 };
                 context.Cars.Add(car);
-                context.SaveChanges();
+                 await context.SaveChangesAsync();
 
             }
-
-
-
         }
     }
 }

@@ -23,7 +23,7 @@
         </Rectangle>
 
         <Label Content="reg No" HorizontalAlignment="Left" Margin="55,145,0,0" VerticalAlignment="Top" Height="45" Width="75" Foreground="#FF3C0C0C" FontSize="20"/>
-        <TextBox x:Name="reg_No_filld" HorizontalAlignment="Left" Margin="132,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" Height="30" Foreground="#FF0A0303" Background="#FFE2CD45" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold"/>
+        <TextBox x:Name="reg_No_filld" CharacterCasing="Upper" HorizontalAlignment="Left" Margin="132,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" Height="30" Foreground="#FF0A0303" Background="#FFE2CD45" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold"/>
         <Button x:Name="Find_byReg" HorizontalAlignment="Left" Margin="250,155,0,0" VerticalAlignment="Top" Height="30" Width="70" Click="Find_byReg_Click">
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -52,20 +52,8 @@
             </Rectangle.Fill>
         </Rectangle>
         <Label Content="Customer name" HorizontalAlignment="Left" Margin="380,147,0,0" VerticalAlignment="Top" Height="45" Width="152" Foreground="#FF3C0C0C" FontSize="20"/>
-        <TextBox HorizontalAlignment="Left" Margin="532,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="30" Foreground="#FF0A0303" Background="#FFF9DFDF" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold"/>
-        <Button x:Name="Find_ByCustomer_Name" HorizontalAlignment="Left" Margin="669,157,0,0" VerticalAlignment="Top" Height="30" Width="70" Click="Find_ByCustomer_Name_Click" >
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="White" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-            <Button.Background>
-                <ImageBrush ImageSource="534-5340235_tequila-clipart.png" Stretch="UniformToFill"/>
-            </Button.Background>
-        </Button>
-        <TextBox HorizontalAlignment="Left" Margin="532,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="30" Foreground="#FF0A0303" Background="#FFF9DFDF" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold"/>
-        <Button x:Name="Find_byReg_Copy1" HorizontalAlignment="Left" Margin="669,243,0,0" VerticalAlignment="Top" Height="30" Width="70">
+        <TextBox x:Name="phone_textBox" HorizontalAlignment="Left" Margin="532,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="30" Foreground="#FF0A0303" Background="#FFEBEBEB" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold"/>
+        <Button x:Name="Find_byPhone" HorizontalAlignment="Left" Margin="669,243,0,0" VerticalAlignment="Top" Height="30" Width="70" Click="Find_byPhone_Click">
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -86,7 +74,7 @@
             </Rectangle.Fill>
         </Rectangle>
         <Label Content="Orders" HorizontalAlignment="Left" Margin="50,236,0,0" VerticalAlignment="Top" Height="47" Width="71" Foreground="#FF3C0C0C" FontSize="20"/>
-        <DatePicker HorizontalAlignment="Left" Margin="132,245,0,0" VerticalAlignment="Top"/>
+        <DatePicker HorizontalAlignment="Left" Margin="132,245,0,0" VerticalAlignment="Top" Background="#FFEEEEEE"/>
         <Button x:Name="Find_byReg_Copy2" HorizontalAlignment="Left" Margin="250,239,0,0" VerticalAlignment="Top" Height="30" Width="70">
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -119,10 +107,10 @@
             </Button.Background>
         </Button>
         <Label Content="Full history" HorizontalAlignment="Left" Margin="55,309,0,0" VerticalAlignment="Top" Height="45" Width="121" Foreground="#FF3C0C0C" FontSize="20"/>
-        <TextBox x:Name="regNo_full_history" HorizontalAlignment="Left" Margin="552,317,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" Height="30" Foreground="#FF0A0303" Background="#FFE2CD45" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold"/>
+        <TextBox x:Name="regNo_full_history" CharacterCasing="Upper" HorizontalAlignment="Left" Margin="552,317,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" Height="30" Foreground="#FF0A0303" Background="#FFE2CD45" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold"/>
         <Label Content="reg No" HorizontalAlignment="Left" Margin="472,309,0,0" VerticalAlignment="Top" Height="45" Width="75" Foreground="#FF3C0C0C" FontSize="20"/>
         <Label Content="This search is £ 10.00 ! ! !" HorizontalAlignment="Left" Margin="210,310,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontStyle="Italic" Foreground="#FFEF0B0B" Width="249"/>
-        <Button x:Name="setings_btn" HorizontalAlignment="Left" Margin="669,10,0,0" VerticalAlignment="Top" Height="30" Width="70" Click="Find_ByCustomer_Name_Click" >
+        <Button x:Name="setings_btn" HorizontalAlignment="Left" Margin="669,10,0,0" VerticalAlignment="Top" Height="30" Width="70"  >
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -147,7 +135,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Button x:Name="Find_ByCustomer_Name_Copy" HorizontalAlignment="Left" Margin="669,80,0,0" VerticalAlignment="Top" Height="30" Width="70" Click="Find_ByCustomer_Name_Click" Content="Book" FontSize="20" FontWeight="Bold" FontStyle="Italic" >
+        <Button x:Name="book_oil_collection" HorizontalAlignment="Left" Margin="669,80,0,0" VerticalAlignment="Top" Height="30" Width="70" Content="Book" FontSize="20" FontWeight="Bold" FontStyle="Italic" >
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -159,6 +147,7 @@
             </Button.Background>
         </Button>
         <Label Content="Book your waste oil collection" HorizontalAlignment="Left" Margin="380,74,0,0" VerticalAlignment="Top" Height="45" Width="289" Foreground="#FF3C0C0C" FontSize="20"/>
+        <ComboBox x:Name="customer_comboBox" HorizontalAlignment="Left" Margin="536,159,0,0" VerticalAlignment="Top" Width="203" Height="30" FontSize="18" BorderBrush="#FFF9DFDF" Background="#FFF9DFDF" Text="customer_comboBox_SelectionChanged" SelectionChanged="customer_comboBox_SelectionChanged"/>
 
     </Grid>
 </Window>

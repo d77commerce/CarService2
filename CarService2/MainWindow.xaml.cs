@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Documents;
 using System.Windows.Threading;
 using CarService2.Classes;
 using CarService2.DB;
@@ -17,10 +21,11 @@ namespace CarService2
     public partial class MainWindow : Window
     {
         private CarContext _dbContext = new CarContext(new DbContextOptions<CarContext>());
-
+        //  private IEnumerable<CustomerDb> Customers { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            LoadCustomers();
         }
         private void mine_windouw_Loaded(object sender, RoutedEventArgs e)
         {
@@ -50,39 +55,17 @@ namespace CarService2
         {
             if (true)
             {
-
-
                 DateTime time = new DateTime();
                 time = DateTime.Now;
                 time_display.Text = time.ToString();
             }
-
-
         }
-
-        private void Find_ByCustomer_Name_Click(object sender, RoutedEventArgs e)
-        {
-            string Reg_No = reg_No_filld.Text.ToUpper();
-            string jsonData = @"
-{
-  ""name"": ""John Doe"",
-  ""age"": 30,
-  ""email"": ""john.doe@example.com"",
-  ""address"": ""123 Main St""
-}";
-
-            string folderPath = "C:\\Users\\d77co\\Source\\Repos\\d77commerce\\CarService2\\CarService2\\HtmlAddJson\\"; // Provide the desired folder path here
-
-            ConvertJsonToHtml(jsonData, Reg_No);
-
-        }
-
         private void Find_full_car_history_Click(object sender, RoutedEventArgs e)
         {
             _dbContext.Database.OpenConnection();
-          //  var allCars = _dbContext.Cars.ToList();
+            //  var allCars = _dbContext.Cars.ToList();
 
-         
+
             string registrationNumber = regNo_full_history.Text;
 
             // Find the car by registration number
@@ -105,5 +88,122 @@ namespace CarService2
             }
             _dbContext.Database.CloseConnection();
         }
+
+        /*private void customer_comboBox_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+            CustomerDb customer = new CustomerDb();
+            _dbContext.Database.OpenConnection();
+            CustomerDb customers = _dbContext.Customers.;
+            _dbContext.Database.CloseConnection();
+            customer_comboBox.Items.Clear();
+
+            customer_comboBox.ItemsSource = customers;
+
+
+        }*/
+
+        private void LoadCustomers()
+        {
+            customer_comboBox.Items.Clear();
+
+            try
+            {
+                _dbContext.Database.OpenConnection();
+                // var foundCustomer = _dbContext.Customers;
+                var foundCustomer = _dbContext.Customers;
+
+                if (foundCustomer != null)
+                {
+                    foreach (var customer in foundCustomer)
+                    {
+                        customer_comboBox.Items.Add(customer.FullName.ToString());
+
+                    }
+                }
+                else
+                {
+                    // Handle the case where no customers were found
+                    MessageBox.Show("No customers found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that occurred during the database operation
+                MessageBox.Show($"Error loading customers: {ex.Message}");
+            }
+            finally
+            {
+                _dbContext.Database.CloseConnection();
+            }
+        }
+        private void customer_comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // Check if an item is selected (it could be null if nothing is selected)
+            if (e.AddedItems.Count > 0)
+            {
+                // Assuming your ComboBox items are of type 'Customer', you should cast the selected item accordingly.
+                string one = (string)e.AddedItems[0];
+                MessageBox.Show(one);
+                // Create a new instance of the 'Cuctomer' window
+                Cuctomer cuctomer = new Cuctomer();
+                cuctomer.customer_full_name.Text = one;
+                /*
+                // Set the 'customer_full_name' property of the 'Cuctomer' window with the selected customer's full name
+                cuctomer.customer_full_name.Text = selectedCustomer.FullName;
+                */
+
+                // Show the 'Cuctomer' window
+                cuctomer.Show();
+            }
+        }
+
+        private void Find_byPhone_Click(object sender, RoutedEventArgs e)
+        {
+            string customerPhone =  phone_textBox.Text;
+           
+            try
+            {
+                _dbContext.Database.OpenConnection();
+                // var foundCustomer = _dbContext.Customers;
+                var foundPhone = _dbContext.Customers.FirstOrDefault(c=>c.PhoneNumber==customerPhone);
+
+                if (foundPhone != null)
+                {
+                    MessageBox.Show(foundPhone.FullName);
+                }
+                else
+                {
+                    // Handle the case where no customers were found
+                    MessageBox.Show("No customers found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that occurred during the database operation
+                MessageBox.Show($"Error loading customers: {ex.Message}");
+            }
+            finally
+            {
+                _dbContext.Database.CloseConnection();
+            }
+
+        }
+
+        /*private void customer_comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Cuctomer cuctomer = new Cuctomer();
+            cuctomer.customer_full_name = e.;
+            cuctomer.Show();
+        }*/
+
+        /*private void customer_comboBox_SelectionChanged(object sender, IsSele e)
+        {
+            Cuctomer cuctomer = new Cuctomer();
+            cuctomer.customer_full_name= e;
+            cuctomer.Show();
+        }*/
+
+
     }
 }
+

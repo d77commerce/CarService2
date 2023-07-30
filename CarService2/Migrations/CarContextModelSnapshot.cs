@@ -50,6 +50,8 @@ namespace CarService2.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CustomerId");
+
                     b.ToTable("Cars");
 
                     b.HasData(
@@ -64,6 +66,63 @@ namespace CarService2.Migrations
                             MonthOfFirstRegistration = "March,2000",
                             RegistrationNumber = "11111"
                         });
+                });
+
+            modelBuilder.Entity("CarService2.DB.CustomerDb", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("CompanyName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Customers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CompanyName = "Onyx",
+                            Email = "customer@mail.com",
+                            FullName = "Customer basic",
+                            IsDeleted = false,
+                            PhoneNumber = "0777"
+                        });
+                });
+
+            modelBuilder.Entity("CarService2.DB.CarDb", b =>
+                {
+                    b.HasOne("CarService2.DB.CustomerDb", "Customer")
+                        .WithMany("Cars")
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
+                });
+
+            modelBuilder.Entity("CarService2.DB.CustomerDb", b =>
+                {
+                    b.Navigation("Cars");
                 });
 #pragma warning restore 612, 618
         }

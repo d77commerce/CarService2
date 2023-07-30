@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http.Headers;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http.Json;
+using System.Windows;
 
 namespace CarService2.Classes
 {
@@ -34,8 +36,17 @@ namespace CarService2.Classes
                 var response = await httpClient.PostAsJsonAsync(endpoint, data);
 
                 response.EnsureSuccessStatusCode();
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    return await response.Content.ReadAsStringAsync();
+                }
+                else
+                {
+                    MessageBox.Show("Not Found in DVLA records !");
+                    return null;
+                }
 
-                return await response.Content.ReadAsStringAsync();
+
             }
             catch (HttpRequestException ex)
             {

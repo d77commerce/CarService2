@@ -5,6 +5,7 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>CarIcon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,6 +13,10 @@
     <None Remove="car-soft.bmp" />
     <None Remove="PhotoRoom_20200618_144239_second-removebg-preview.png" />
     <None Remove="Setings.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="CarIcon.ico" />
   </ItemGroup>
 
   <ItemGroup>

@@ -9,10 +9,10 @@ namespace CarService2.Classes
     public class CustomerAdd
     {
         public int Id { get; set; } = 1;
-        public string FullName { get; set; } = "John Doe";
+        public string FullName { get; set; } 
         public string CompanyName { get; set; } = "non";
-        public string PhoneNumber { get; set; } = "077777777";
-        public string Email { get; set; } = "john.doe@example.com";
+        public string PhoneNumber { get; set; }
+        public string Email { get; set; } = "non";
         public bool IsDeleted { get; set; } = false;
 
         public static string ToHtmlTable2<T>(T obj)
