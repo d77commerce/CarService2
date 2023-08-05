@@ -26,7 +26,7 @@ namespace CarService2
         {
             InitializeComponent();
             dvlaCarModel = new DvlaCarModel();
-           
+
         }
 
 
@@ -62,6 +62,15 @@ namespace CarService2
             customer.Show();
         }
 
-     
+        private void oil_task_btn_Click(object sender, RoutedEventArgs e)
+        { 
+
+            TaskChangeOil changeOil = new TaskChangeOil();
+            changeOil.reg_car_textBox.Text = reg_car_textBox.Text;
+            changeOil.customerName_textbox.Text = (string)customer_fullName_car.Content;
+            changeOil.Show();
+        }
+
+       
     }
 }

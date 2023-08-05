@@ -49,7 +49,7 @@ namespace CarService2.Classes
                     {
                         Text = foundCar.Make.ToString()
                     },
-                    model_car_textBox =
+                    colour_car_textBox = 
                     {
                         Text = foundCar.Colour.ToString()
                     },

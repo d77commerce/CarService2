@@ -1,31 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.IO;
 using System.Text;
 
+
 namespace CarService2.Classes
 {
-    public class ClassToHtml
+    public class TaskOilToHtml
     {
-
-
-        public static void ConvertClassToHtmlAndSave(string folderPath, string regNo, int? customerId)
+        public static void ConvertTaskOilToHtmlAndSave(string folderPath, string regNo, int? customerId)
         {
-            var customerAdd = new CustomerAdd();
-            if (customerId == 1)
-            {
-                customerAdd.Id = 1;
-                customerAdd.FullName = "John Doe";
-                customerAdd.PhoneNumber = "0777777";
-                customerAdd.Email = "john.doe@example.com";
-                customerAdd.CompanyName = "Onyx";
-            }
-            else
-            {
-
-            };
-
-
-
             var car = new Car();
 
             Directory.CreateDirectory(folderPath);
@@ -45,7 +32,7 @@ namespace CarService2.Classes
             htmlContent += "<p>Client</p>";
             htmlContent += "";
             var tableOfCustomer = new StringBuilder();
-            tableOfCustomer.Append(CustomerAdd.ToHtmlTable2(customerAdd));
+            tableOfCustomer.Append(CustomerAdd.ToHtmlTable2(customerId));
             htmlContent += tableOfCustomer;
             htmlContent += "<p></p>";
             var table = new StringBuilder();
@@ -53,7 +40,7 @@ namespace CarService2.Classes
             table.Append(Car.ToHtmlTable(car));
 
             htmlContent += table;
-           
+
             htmlContent += "</body></html>";
 
             // Save the HTML content to a file

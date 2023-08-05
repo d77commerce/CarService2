@@ -51,7 +51,7 @@ namespace CarService2.Classes
                 {
                     Text = obj.Make.ToString()
                 },
-                model_car_textBox =
+                colour_car_textBox =
                 {
                     Text = obj.Colour.ToString()
                 },
