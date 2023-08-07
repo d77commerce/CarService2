@@ -28,6 +28,7 @@ namespace CarService2
 
         private void print_dvla_info_Click(object sender, RoutedEventArgs e)
         {
+
            SaveHtmlToFile.SaveHtml(dvlaResultHtml);
 
 

@@ -71,6 +71,12 @@ namespace CarService2
             changeOil.Show();
         }
 
-       
+        private void new_order_btn_Click(object sender, RoutedEventArgs e)
+        {
+            TaskNewOrder order = new TaskNewOrder();
+            order.reg_car_textBox.Text= reg_car_textBox.Text;
+            order.customerName_textbox.Text=(string)customer_fullName_car.Content;
+            order.Show();
+        }
     }
 }

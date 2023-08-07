@@ -61,7 +61,7 @@
                 </Button.BorderBrush>
             </Button>
             <Label Content="Customer" HorizontalAlignment="Left" Margin="332,344,0,0" VerticalAlignment="Top" Height="44" Width="100" Foreground="#FF3C0C0C" FontSize="20"/>
-            <Button x:Name="Add_to_db" HorizontalAlignment="Left" Margin="595,349,0,0" VerticalAlignment="Top" Height="30" Width="180" Content="New work order" FontWeight="Bold" FontSize="20" Background="White">
+            <Button x:Name="new_order_btn" HorizontalAlignment="Left" Margin="595,349,0,0" VerticalAlignment="Top" Height="30" Width="180" Content="New work order" FontWeight="Bold" FontSize="20" Background="White" Click="new_order_btn_Click">
                 <Button.BorderBrush>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black"/>
@@ -91,8 +91,6 @@
                 </Button.BorderBrush>
             </Button>
             <Label x:Name="customer_fullName_car" Content="" HorizontalAlignment="Left" Margin="206,70,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Width="144"/>
-            <Label Content="model" HorizontalAlignment="Left" Margin="323,155,0,0" VerticalAlignment="Top" Height="45" Width="76" Foreground="#FF3C0C0C" FontSize="20"/>
-            <TextBox x:Name="make_car_textBox_Copy" HorizontalAlignment="Left" Margin="432,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="30" Foreground="#FF0A0303" Background="#FFF9DFDF" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold"/>
             <TextBox x:Name="engine_textBox" HorizontalAlignment="Left" Margin="432,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" Height="30" Foreground="#FF0A0303" Background="#FFF9DFDF" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold" IsReadOnly ="true"/>
             <Label Content="Engine cm3" HorizontalAlignment="Left" Margin="322,201,0,0" VerticalAlignment="Top" Height="46" Width="119" Foreground="#FF3C0C0C" FontSize="20"/>
 

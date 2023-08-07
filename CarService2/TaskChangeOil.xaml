@@ -26,22 +26,48 @@
         <Label Content="Gear oil" HorizontalAlignment="Left" Margin="253,100,0,0" VerticalAlignment="Top" Height="46" Width="115" Foreground="#FF3C0C0C" FontSize="20"/>
         <Label Content="Differential oil" HorizontalAlignment="Left" Margin="253,187,0,0" VerticalAlignment="Top" Height="46" Width="135" Foreground="#FF3C0C0C" FontSize="20"/>
         <Label Content="Hydraulic oil" HorizontalAlignment="Left" Margin="253,144,0,0" VerticalAlignment="Top" Height="46" Width="130" Foreground="#FF3C0C0C" FontSize="20"/>
-        <ComboBox HorizontalAlignment="Left" Margin="390,63,0,0" VerticalAlignment="Top" Width="120" Height="30" FontSize="16" AutomationProperties.HelpText="oil Specificatin"/>
-        <TextBox HorizontalAlignment="Left" Margin="527,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="30" FontSize="18"/>
-        <CheckBox Content="oil Filter" HorizontalAlignment="Left" Margin="679,65,0,0" VerticalAlignment="Top" Height="30"/>
-        <CheckBox Content="Reset Computer" HorizontalAlignment="Left" Margin="310,297,0,0" VerticalAlignment="Top" FontSize="18" Width="192"/>
-        <ComboBox HorizontalAlignment="Left" Margin="390,106,0,0" VerticalAlignment="Top" Width="120" Height="30" FontSize="16" AutomationProperties.HelpText="oil Specificatin"/>
-        <TextBox HorizontalAlignment="Left" Margin="527,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="30" FontSize="18"/>
-        <CheckBox Content="oil Filter" HorizontalAlignment="Left" Margin="679,103,0,0" VerticalAlignment="Top" Height="30"/>
-        <ComboBox HorizontalAlignment="Left" Margin="390,150,0,0" VerticalAlignment="Top" Width="120" Height="30" FontSize="16" AutomationProperties.HelpText="oil Specificatin"/>
-        <TextBox HorizontalAlignment="Left" Margin="527,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="30" FontSize="18"/>
-        <ComboBox HorizontalAlignment="Left" Margin="390,193,0,0" VerticalAlignment="Top" Width="120" Height="30" FontSize="16" AutomationProperties.HelpText="oil Specificatin"/>
-        <TextBox HorizontalAlignment="Left" Margin="527,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="30" FontSize="18"/>
-        <CheckBox Content="Air Filter" HorizontalAlignment="Left" Margin="310,268,0,0" VerticalAlignment="Top" FontSize="18" Width="86"/>
-        <CheckBox Content="Cabine Filter" HorizontalAlignment="Left" Margin="310,238,0,0" VerticalAlignment="Top" FontSize="18" Width="122"/>
+        <ComboBox x:Name="engine_comboBox" HorizontalAlignment="Left" Margin="390,63,0,0" VerticalAlignment="Top" Width="120" Height="30" FontSize="16" AutomationProperties.HelpText="oil Specificatin">
+            <ComboBoxItem Content="15W40"/>
+            <ComboBoxItem Content="10W40"/>
+            <ComboBoxItem Content="5W40"/>
+            <ComboBoxItem Content="15W50"/>
+            <ComboBoxItem Content="10W50"/>
+            <ComboBoxItem Content="5W50"/>
+            <ComboBoxItem Content="10W30"/>
+            <ComboBoxItem Content="5W30"/>
+            <ComboBoxItem Content="0W40"/>
+            <ComboBoxItem Content="0W30"/>
+
+        </ComboBox>
+        <TextBox x:Name="Engine_producer_textBox" HorizontalAlignment="Left" Margin="527,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="30" FontSize="18"/>
+        <CheckBox x:Name="filter_oil_check" Content="oil Filter" HorizontalAlignment="Left" Margin="670,65,0,0" VerticalAlignment="Top" Height="30"/>
+        <CheckBox x:Name="reset_computer_check" Content="Reset Computer" HorizontalAlignment="Left" Margin="310,297,0,0" VerticalAlignment="Top" FontSize="18" Width="192"/>
+        <ComboBox x:Name="gear_ComboBox" HorizontalAlignment="Left" Margin="390,106,0,0" VerticalAlignment="Top" Width="120" Height="30" FontSize="16" AutomationProperties.HelpText="oil Specificatin">
+            <ComboBoxItem Content="75W90"/>
+            <ComboBoxItem Content="80W90"/>
+            <ComboBoxItem Content="75W140"/>
+            <ComboBoxItem Content="MTF"/>
+            <ComboBoxItem Content="ATF"/>
+        </ComboBox>
+        <TextBox x:Name="gear_producer_textBox" HorizontalAlignment="Left" Margin="527,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="30" FontSize="18"/>
+        <CheckBox x:Name="filter_gear_check" Content="gear oil Filter" HorizontalAlignment="Left" Margin="671,103,0,0" VerticalAlignment="Top" Height="30"/>
+        <ComboBox x:Name="hydr_comboBox" HorizontalAlignment="Left" Margin="390,150,0,0" VerticalAlignment="Top" Width="120" Height="30" FontSize="16" AutomationProperties.HelpText="oil Specificatin" >
+            <ComboBoxItem Content="ISO 32"/>
+            <ComboBoxItem Content="ISO 46"/>
+            <ComboBoxItem Content="ISO 68"/>
+        </ComboBox>
+        <TextBox x:Name="hyd_producer_textBox" HorizontalAlignment="Left" Margin="527,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="30" FontSize="18"/>
+        <ComboBox x:Name="deffere_comboBox" HorizontalAlignment="Left" Margin="390,193,0,0" VerticalAlignment="Top" Width="120" Height="30" FontSize="16" AutomationProperties.HelpText="oil Specificatin">
+            <ComboBoxItem Content="75W90"/>
+            <ComboBoxItem Content="80W90"/>
+            <ComboBoxItem Content="75W140"/>
+        </ComboBox>
+        <TextBox x:Name="deff_producer_textBox" HorizontalAlignment="Left" Margin="527,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="30" FontSize="18"/>
+        <CheckBox x:Name="air_filter_check" Content="Air Filter" HorizontalAlignment="Left" Margin="310,268,0,0" VerticalAlignment="Top" FontSize="18" Width="86"/>
+        <CheckBox x:Name="cabine_filter_check" Content="Cabine Filter" HorizontalAlignment="Left" Margin="310,238,0,0" VerticalAlignment="Top" FontSize="18" Width="122"/>
         <TextBox HorizontalAlignment="Left" Margin="25,282,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="30" FontSize="18"/>
         <Label Content="Order / Task No :" HorizontalAlignment="Left" Height="28" Margin="25,254,0,0" VerticalAlignment="Top" Width="105"/>
-        <Button x:Name="Add_to_db_Copy" HorizontalAlignment="Left" Margin="542,302,0,0" VerticalAlignment="Top" Height="30" Width="180" Content="Save Task as done" FontWeight="Bold" FontSize="20" Background="#FFF9F9F9">
+        <Button x:Name="save_oil_task_btn" HorizontalAlignment="Left" Margin="542,302,0,0" VerticalAlignment="Top" Height="30" Width="180" Content="Save Task as done" FontWeight="Bold" FontSize="20" Background="#FFF9F9F9" Click="save_oil_task_btn_Click" >
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -49,8 +75,10 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <CheckBox Content="Automatic" HorizontalAlignment="Left" Margin="679,120,0,0" VerticalAlignment="Top" Height="30"/>
+        <CheckBox x:Name="gear_automatic_check" Content="Automatic" HorizontalAlignment="Left" Margin="671,120,0,0" VerticalAlignment="Top" Height="30"/>
         <TextBox x:Name="customerName_textbox" HorizontalAlignment="Left" Margin="25,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="30" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="mileage_textBox" HorizontalAlignment="Left" Margin="25,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="30" FontSize="18" FontWeight="Bold" Text="0" TextAlignment="Right" />
+        <Label Content="mileage" HorizontalAlignment="Left" Margin="24,172,0,0" VerticalAlignment="Top" Foreground="Red"/>
 
     </Grid>
 </Window>

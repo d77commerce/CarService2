@@ -13,23 +13,24 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using CarService2.Classes;
 
-
 namespace CarService2
 {
     /// <summary>
-    /// Interaction logic for TaskChangeOil.xaml
+    /// Interaction logic for TaskNewOrder.xaml
     /// </summary>
-    public partial class TaskChangeOil : Window
+    public partial class TaskNewOrder : Window
     {
-        public TaskChangeOil()
+        public TaskNewOrder()
         {
             InitializeComponent();
         }
 
+       
 
-        private void save_oil_task_btn_Click(object sender, RoutedEventArgs e)
+      
+        public void chenge_order_status_btn_Click(object sender, RoutedEventArgs e)
         {
-            var oilLabel = new PrintOilLabel()
+            var orderLabel = new PrintTaskLabel()
             {
                 Mileage = Convert.ToInt32(mileage_textBox.Text),
                 EngineOil = engine_comboBox.SelectionBoxItem.ToString(),
@@ -38,7 +39,7 @@ namespace CarService2
                 GearOil = gear_ComboBox.SelectionBoxItem.ToString(),
                 GearOilBrand = gear_producer_textBox.Text,
                 GearFilter = filter_gear_check.IsChecked != null && filter_gear_check.IsChecked.Value,
-                Automatic = gear_automatic_check.IsChecked != null && gear_automatic_check.IsChecked.Value,
+                //  Automatic = gear_automatic_check.IsChecked != null && gear_automatic_check.IsChecked.Value,
                 HydraulicOil = hydr_comboBox.SelectionBoxItem.ToString(),
                 HydraulicOilBrand = hyd_producer_textBox.Text,
                 DifferentialOil = deffere_comboBox.SelectionBoxItem.ToString(),
@@ -47,17 +48,18 @@ namespace CarService2
                 CabinFilter = cabine_filter_check.IsChecked != null && cabine_filter_check.IsChecked.Value,
                 ResetComputer = reset_computer_check.IsChecked != null && reset_computer_check.IsChecked.Value
             };
-            if (oilLabel.Mileage == 0)
+            if (orderLabel.Mileage == 0)
             {
                 MessageBox.Show("Fill The Mileage !");
                 return;
             }
-            string result = TaskToHtml.ConvertTaskOilToHtml(oilLabel);
-         ShowOilLabel oilLabelShow = new ShowOilLabel();
-           oilLabelShow.DisplayOilLabel(result,oilLabel);
-           oilLabelShow.Show();
-           Close();
+            string result = TaskToHtml.ConvertTaskOrderToHtml(orderLabel);
+            ShowOrderLabel orderLabelShow = new ShowOrderLabel();
+            orderLabelShow.DisplayOilLabel(result, orderLabel);
+            orderLabelShow.Show();
+            Close();
         }
 
+       
     }
 }

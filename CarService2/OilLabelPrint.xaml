@@ -1,0 +1,51 @@
+﻿<Page x:Class="CarService2.OilLabelPrint"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CarService2"
+      mc:Ignorable="d" 
+      d:DesignHeight="200" d:DesignWidth="300"
+      Title="OilLabelPrint"  Background="White">
+
+    <Canvas>
+        <Label Content="Date :" Width="40" HorizontalAlignment="Center" Canvas.Left="160" Canvas.Top="147" VerticalAlignment="Top"/>
+        <TextBox x:Name="date" TextWrapping="Wrap" Text="01.01.23" Width="70" TextChanged="date_TextChanged" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" Canvas.Left="205" Canvas.Top="151" VerticalAlignment="Top" Height="21"/>
+        <Canvas Height="26" Width="278" HorizontalAlignment="Left" Canvas.Left="13" Canvas.Top="12" VerticalAlignment="Center">
+            <Label Content="Engine oil :" Width="65" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="-2"/>
+            <Label Content="Brand" Width="48" HorizontalAlignment="Left" Canvas.Left="132" VerticalAlignment="Center"/>
+            <TextBox x:Name="brand_oil_textBox" TextWrapping="Wrap" Text="No" Width="88" HorizontalContentAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Canvas.Left="187" Canvas.Top="4" VerticalAlignment="Center" TextChanged="brand_oil_textBox_TextChanged"/>
+            <TextBox x:Name="oil_spec_textBox" TextWrapping="Wrap" Text="15W40" Width="55" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Canvas.Left="75" Canvas.Top="5" VerticalAlignment="Center" BorderBrush="{x:Null}" TextChanged="oil_spec_textBox_TextChanged"/>
+
+        </Canvas>
+        <Canvas Height="26" Width="277" HorizontalAlignment="Left" Canvas.Left="13" Canvas.Top="39" VerticalAlignment="Center">
+            <Label Content="Gear Box oil" Width="77" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="-2"/>
+            <TextBox x:Name="gearOil_spec_textBox" TextWrapping="Wrap" Text="No" Width="55" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Canvas.Left="76" Canvas.Top="4" VerticalAlignment="Center" BorderBrush="{x:Null}" TextChanged="gearOil_spec_textBox_TextChanged"/>
+            <Label Content="Brand" Width="43" HorizontalAlignment="Left" Canvas.Left="131" VerticalAlignment="Center"/>
+            <TextBox x:Name="brand_gearOil_textBox" TextWrapping="Wrap" Text="No" Width="88" HorizontalContentAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Canvas.Left="187" Canvas.Top="4" VerticalAlignment="Center" TextChanged="brand_gearOil_textBox_TextChanged"/>
+
+        </Canvas>
+        <Canvas Height="26" Width="277" HorizontalAlignment="Left" Canvas.Left="13" Canvas.Top="66" VerticalAlignment="Center">
+            <Label Content="Steering oil" Width="72" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="-2"/>
+            <Label Content="Brand" Width="42" HorizontalAlignment="Left" Canvas.Left="133" VerticalAlignment="Center"/>
+            <TextBox x:Name="brand_steeringOil_textBox" TextWrapping="Wrap" Text="No" Width="88" HorizontalContentAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Canvas.Left="187" Canvas.Top="4" VerticalAlignment="Center" TextChanged="brand_steeringOil_textBox_TextChanged"/>
+            <TextBox x:Name="SteeringOil_spec_textBox" TextWrapping="Wrap" Text="No" Width="55" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Canvas.Left="75" Canvas.Top="4" VerticalAlignment="Center" BorderBrush="{x:Null}" TextChanged="SteeringOil_spec_textBox_TextChanged"/>
+
+        </Canvas>
+        <Label Content="Oil filter" Width="60" HorizontalAlignment="Left" Canvas.Left="20" Canvas.Top="114" VerticalAlignment="Center"/>
+        <Label Content="Air filter" Width="60" HorizontalAlignment="Center" Canvas.Left="21" Canvas.Top="151" VerticalAlignment="Top"/>
+        <Label Content="Cabin filter" Width="67" HorizontalAlignment="Center" Canvas.Left="15" Canvas.Top="170" VerticalAlignment="Top"/>
+        <TextBox x:Name="oilFilter_texBox" TextWrapping="Wrap" Text="No" FontWeight="Bold" HorizontalContentAlignment="Center" Height="18" Canvas.Left="87" Canvas.Top="120" Width="55" BorderBrush="{x:Null}" TextChanged="oilFilter_texBox_TextChanged" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox x:Name="cabinFilter_texBox" TextWrapping="Wrap" Text="No" FontWeight="Bold" HorizontalContentAlignment="Center" Height="18" Canvas.Left="87" Canvas.Top="174" Width="55" BorderBrush="{x:Null}" TextChanged="cabinFilter_texBox_TextChanged" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox x:Name="airFilter_texBox" TextWrapping="Wrap" Text="No" FontWeight="Bold" HorizontalContentAlignment="Center" Height="18" Canvas.Left="87" Canvas.Top="156" Width="55" BorderBrush="{x:Null}" TextChanged="airFilter_texBox_TextChanged" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Content="Next change due :" FontSize="16" Width="140" HorizontalAlignment="Center" Canvas.Left="150" Canvas.Top="87" VerticalAlignment="Top"/>
+        <Label Content="Powered by Artmillenium.co.uk" Width="135" FontSize="9" Background="White" HorizontalAlignment="Center" Canvas.Left="157" Canvas.Top="172" VerticalAlignment="Top" Height="22"/>
+        <TextBox x:Name="mileage_textBox" TextWrapping="Wrap" Text="63000" Width="98" FontSize="19" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Canvas.Left="148" Canvas.Top="116" VerticalAlignment="Top" BorderBrush="{x:Null}" TextChanged="mileage_textBox_TextChanged"/>
+        <Label Content="Gear box filter" Width="90" Canvas.Left="6" Canvas.Top="133" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox x:Name="gearOilFilter_texBox" TextWrapping="Wrap" Text="No" FontWeight="Bold" HorizontalContentAlignment="Center" Height="18" Canvas.Left="87" Canvas.Top="138" Width="55" BorderBrush="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Top" TextChanged="gearOilFilter_texBox_TextChanged"/>
+        <Label Content="Mileas" Canvas.Left="246" Canvas.Top="116" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Content="restet" Width="50" Canvas.Left="27" Canvas.Top="97" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="reset_texBox" TextWrapping="Wrap" Text="No" FontWeight="Bold" HorizontalContentAlignment="Center" Height="18" Canvas.Left="87" Canvas.Top="102" Width="55" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center" TextChanged="reset_texBox_TextChanged"/>
+
+    </Canvas>
+</Page>
