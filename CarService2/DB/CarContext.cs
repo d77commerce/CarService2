@@ -24,6 +24,8 @@ namespace CarService2.DB
 
         public DbSet<CarDb> Cars { get; set; }
         public DbSet<CustomerDb> Customers { get; set; }
+        public DbSet<TaskDb> TasksDb { get; set; }
+        public DbSet<OrderOfTaskDb> OrdersDbs { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -37,6 +39,7 @@ namespace CarService2.DB
             // Seed data for the Cars table
             modelBuilder.ApplyConfiguration(new CarConfiguration());
             modelBuilder.ApplyConfiguration(new CustomerConfiguration());
+            modelBuilder.ApplyConfiguration(new OrdersConfiguration());
             base.OnModelCreating(modelBuilder);
         }
         /*protected override void OnModelCreating(ModelBuilder modelBuilder)
