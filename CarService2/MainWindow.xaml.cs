@@ -38,11 +38,10 @@ namespace CarService2
         }
         private void Find_byReg_Click(object sender, RoutedEventArgs e)
         {
-            var customerId = 1;
             var regNo = reg_No_filld;
             if (regNo != null)
             {
-                CarServiceNew.CarServiceByReg(regNo.Text, customerId);
+                CarServiceNew.CarServiceByReg(regNo.Text);
             }
             else
             {
@@ -142,11 +141,18 @@ namespace CarService2
             if (e.AddedItems.Count > 0)
             {
                 // Assuming your ComboBox items are of type 'Customer', you should cast the selected item accordingly.
-                string one = (string)e.AddedItems[0];
-                MessageBox.Show(one);
+                string name = (string)e.AddedItems[0];
+                int selectedIndex = customer_comboBox.SelectedIndex+1;
+                var client = _dbContext.Customers.FirstOrDefault(c=>c.Id==selectedIndex);
+
+               // MessageBox.Show(one);
                 // Create a new instance of the 'Cuctomer' window
                 Cuctomer cuctomer = new Cuctomer();
-                cuctomer.customer_full_name.Text = one;
+                cuctomer.customer_full_name.Text = client.FullName;
+                cuctomer.customer_Id.Text =client.Id.ToString();
+                cuctomer.customer_email.Text = client.Email.ToString();
+                cuctomer.customer_phone_No.Text = client.PhoneNumber.ToString();
+                cuctomer.customer_company_name.Text=client.CompanyName.ToString();
                 /*
                 // Set the 'customer_full_name' property of the 'Cuctomer' window with the selected customer's full name
                 cuctomer.customer_full_name.Text = selectedCustomer.FullName;
@@ -186,24 +192,13 @@ namespace CarService2
             {
                 _dbContext.Database.CloseConnection();
             }
-
         }
 
-        /*private void customer_comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void add_new_customer_Click(object sender, RoutedEventArgs e)
         {
             Cuctomer cuctomer = new Cuctomer();
-            cuctomer.customer_full_name = e.;
             cuctomer.Show();
-        }*/
-
-        /*private void customer_comboBox_SelectionChanged(object sender, IsSele e)
-        {
-            Cuctomer cuctomer = new Cuctomer();
-            cuctomer.customer_full_name= e;
-            cuctomer.Show();
-        }*/
-
-
+        }
     }
 }
 

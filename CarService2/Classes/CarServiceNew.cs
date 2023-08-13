@@ -11,20 +11,12 @@ namespace CarService2.Classes
         private static CarContext dbContext = new CarContext(new DbContextOptions<CarContext>());
 
 
-        public static void CarServiceByReg(string regNo, int customerId)
+        public static void CarServiceByReg(string regNo)
         {
             var car = new Car();
             dbContext.Database.OpenConnection();
             var foundCar = dbContext.Cars.FirstOrDefault(c => c.RegistrationNumber == regNo);
 
-            var customer = new CustomerAdd()
-            {
-                Id = customerId,
-                FullName = "John Doe",
-                PhoneNumber = "0777777",
-                Email = "john.doe@example.com",
-                CompanyName = "Onyx"
-            };
 
             if (foundCar != null)
             {
@@ -49,7 +41,7 @@ namespace CarService2.Classes
                     {
                         Text = foundCar.Make.ToString()
                     },
-                    colour_car_textBox = 
+                    colour_car_textBox =
                     {
                         Text = foundCar.Colour.ToString()
                     },
@@ -61,12 +53,13 @@ namespace CarService2.Classes
                     {
                         Text = foundCar.EngineCapacity.ToString()
                     }
+
                 };
-                if (car.CustomerId == 1)
-                {
-                    addCar.customer_fullName_car.Content = customer.FullName;
-                }
-                addCar.Show();
+                var customerName = dbContext.Customers.FirstOrDefault(c => c.Id == foundCar.CustomerId)?.CompanyName.ToString();
+                
+                    addCar.customer_fullName_car.Content = customerName;
+                    //foundCar.Customer.CompanyName.ToString();    // customer.FullName;
+                    addCar.Show();
             }
             else
             {
@@ -77,45 +70,6 @@ namespace CarService2.Classes
             }
             dbContext.Database.CloseConnection();
 
-            /*var customer = new CustomerAdd()
-            {
-                Id = customerId,
-                FullName = "John Doe",
-                PhoneNumber = "0777777",
-                Email = "john.doe@example.com",
-                CompanyName = "Onyx"
-            };*/
-
-
-            // var car = new Car(regNo);
-            /*var addCar = new Add_car
-            {
-                reg_car_textBox =
-                {
-                    Text = foundCar.RegistrationNumber.ToString().ToUpper()
-                },
-                fuel_car_textBox =
-                {
-                    Text = foundCar.FuelType.ToString()
-                },
-                make_car_textBox =
-                {
-                    Text = foundCar.Make.ToString()
-                },
-                model_car_textBox =
-                {
-                    Text = foundCar.Colour.ToString()
-                },
-                year_car_textBox =
-                {
-                    Text = foundCar.MonthOfFirstRegistration.ToString()
-                }
-            };*/
-            /*if (car.CustomerId == 1)
-            {
-                addCar.customer_fullName_car.Content = customer.FullName;
-            }
-            addCar.Show();*/
         }
 
     }

@@ -40,6 +40,7 @@ namespace CarService2.DB
             modelBuilder.ApplyConfiguration(new CarConfiguration());
             modelBuilder.ApplyConfiguration(new CustomerConfiguration());
             modelBuilder.ApplyConfiguration(new OrdersConfiguration());
+            modelBuilder.ApplyConfiguration(new TaskConfiguration());
             base.OnModelCreating(modelBuilder);
         }
         /*protected override void OnModelCreating(ModelBuilder modelBuilder)
