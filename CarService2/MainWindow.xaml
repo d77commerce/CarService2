@@ -110,7 +110,7 @@
         <TextBox x:Name="regNo_full_history" CharacterCasing="Upper" HorizontalAlignment="Left" Margin="552,317,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" Height="30" Foreground="#FF0A0303" Background="#FFE2CD45" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold"/>
         <Label Content="reg No" HorizontalAlignment="Left" Margin="472,309,0,0" VerticalAlignment="Top" Height="45" Width="75" Foreground="#FF3C0C0C" FontSize="20"/>
         <Label Content="This search is £ 10.00 ! ! !" HorizontalAlignment="Left" Margin="210,310,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontStyle="Italic" Foreground="#FFEF0B0B" Width="249"/>
-        <Button x:Name="setings_btn" HorizontalAlignment="Left" Margin="669,10,0,0" VerticalAlignment="Top" Height="30" Width="70"  >
+        <Button x:Name="setings_btn" HorizontalAlignment="Left" Margin="669,10,0,0" VerticalAlignment="Top" Height="30" Width="70" OpacityMask="#FFFFF9F9"  >
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -157,6 +157,14 @@
             </Button.BorderBrush>
         </Button>
         <Label Content="new Custoner" HorizontalAlignment="Left" Margin="417,142,0,0" VerticalAlignment="Top" Height="26" Width="85" Foreground="#FFF11414" FontSize="10" FontWeight="Bold"/>
+        <Button x:Name="refresh_btn" HorizontalAlignment="Left" Margin="594,10,0,0" VerticalAlignment="Top" Height="30" Width="70"  OpacityMask="Black" Background="#FFFDFDFD" Content="Refresh" FontSize="19" FontStyle="Italic" FontWeight="Bold" Click="refresh_btn_Click">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
 
     </Grid>
 </Window>

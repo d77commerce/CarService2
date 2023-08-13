@@ -28,7 +28,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="Delete_customer" HorizontalAlignment="Left" Margin="595,342,0,0" VerticalAlignment="Top" Height="30" Width="180" Content="Delete" FontWeight="Bold" FontSize="20" Background="#FFF9F9F9">
+        <Button x:Name="Delete_customer" HorizontalAlignment="Left" Margin="595,342,0,0" VerticalAlignment="Top" Height="30" Width="180" Content="Delete" FontWeight="Bold" FontSize="20" Background="#FFF9F9F9" Click="Delete_customer_Click">
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>

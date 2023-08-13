@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Accessibility;
 
 namespace CarService2
 {
@@ -45,11 +46,9 @@ namespace CarService2
                 _dbContext.SaveChanges(); // Save changes to the database
 
                 MessageBox.Show("New client added successfully!");
-
                 Close();
-
-                var mainWindow = new MainWindow();
-                mainWindow.Show(); 
+                var window = new MainWindow();
+                window.Show();
             }
             catch (Exception ex)
             {

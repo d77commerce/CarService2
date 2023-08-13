@@ -142,17 +142,17 @@ namespace CarService2
             {
                 // Assuming your ComboBox items are of type 'Customer', you should cast the selected item accordingly.
                 string name = (string)e.AddedItems[0];
-                int selectedIndex = customer_comboBox.SelectedIndex+1;
-                var client = _dbContext.Customers.FirstOrDefault(c=>c.Id==selectedIndex);
+                int selectedIndex = customer_comboBox.SelectedIndex + 1;
+                var client = _dbContext.Customers.FirstOrDefault(c => c.Id == selectedIndex);
 
-               // MessageBox.Show(one);
+                // MessageBox.Show(one);
                 // Create a new instance of the 'Cuctomer' window
                 Cuctomer cuctomer = new Cuctomer();
                 cuctomer.customer_full_name.Text = client.FullName;
-                cuctomer.customer_Id.Text =client.Id.ToString();
+                cuctomer.customer_Id.Text = client.Id.ToString();
                 cuctomer.customer_email.Text = client.Email.ToString();
                 cuctomer.customer_phone_No.Text = client.PhoneNumber.ToString();
-                cuctomer.customer_company_name.Text=client.CompanyName.ToString();
+                cuctomer.customer_company_name.Text = client.CompanyName.ToString();
                 /*
                 // Set the 'customer_full_name' property of the 'Cuctomer' window with the selected customer's full name
                 cuctomer.customer_full_name.Text = selectedCustomer.FullName;
@@ -165,13 +165,13 @@ namespace CarService2
 
         private void Find_byPhone_Click(object sender, RoutedEventArgs e)
         {
-            string customerPhone =  phone_textBox.Text;
-           
+            string customerPhone = phone_textBox.Text;
+
             try
             {
                 _dbContext.Database.OpenConnection();
                 // var foundCustomer = _dbContext.Customers;
-                var foundPhone = _dbContext.Customers.FirstOrDefault(c=>c.PhoneNumber==customerPhone);
+                var foundPhone = _dbContext.Customers.FirstOrDefault(c => c.PhoneNumber == customerPhone);
 
                 if (foundPhone != null)
                 {
@@ -198,6 +198,13 @@ namespace CarService2
         {
             Cuctomer cuctomer = new Cuctomer();
             cuctomer.Show();
+        }
+
+        private void refresh_btn_Click(object sender, RoutedEventArgs e)
+        {
+            var mw = new MainWindow();
+            mw.Show();
+            this.Close();
         }
     }
 }
