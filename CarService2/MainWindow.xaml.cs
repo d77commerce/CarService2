@@ -115,7 +115,11 @@ namespace CarService2
                 {
                     foreach (var customer in foundCustomer)
                     {
-                        customer_comboBox.Items.Add(customer.FullName.ToString());
+                        if (customer.IsDeleted == false)
+                        {
+                            customer_comboBox.Items.Add(customer.FullName.ToString());
+                        }
+
 
                     }
                 }
@@ -143,7 +147,7 @@ namespace CarService2
                 // Assuming your ComboBox items are of type 'Customer', you should cast the selected item accordingly.
                 string name = (string)e.AddedItems[0];
                 int selectedIndex = customer_comboBox.SelectedIndex + 1;
-                var client = _dbContext.Customers.FirstOrDefault(c => c.Id == selectedIndex);
+                var client = _dbContext.Customers.FirstOrDefault(c => c.Id == selectedIndex && c.IsDeleted == false);
 
                 // MessageBox.Show(one);
                 // Create a new instance of the 'Cuctomer' window
@@ -205,6 +209,19 @@ namespace CarService2
             var mw = new MainWindow();
             mw.Show();
             this.Close();
+        }
+
+        private void ai_btn_Click(object sender, RoutedEventArgs e)
+        {
+            var mw = new MainWindow();
+            mw.Show();
+            this.Close();
+        }
+
+        private void AI_btn_Click_1(object sender, RoutedEventArgs e)
+        {
+            WebBrowserAI browser = new WebBrowserAI();
+            browser.Show();
         }
     }
 }

@@ -1,0 +1,75 @@
+﻿<Window x:Class="CarService2.WebBrowserAI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarService2"
+        mc:Ignorable="d"
+        Title="WebBrowserAI" Height="755" Width="800" ResizeMode="CanMinimize">
+    <Grid Cursor="Hand" Margin="1,1,1,1">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF2B2929" Offset="0.797"/>
+                <GradientStop Color="#FF676363" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Rectangle Height="53" Margin="139,0,0,0" VerticalAlignment="Top" Fill="#FF2E2F2E"/>
+        <TextBox HorizontalAlignment="Left" Margin="194,666,0,0" TextWrapping="Wrap" Text="Ask Car AI" VerticalAlignment="Top" Width="530" Height="30" Background="#FF4A4747" Foreground="#FFEFE6E6" VerticalContentAlignment="Center">
+            <TextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <Label Content="Chat CarAI (V 1.1.23)" HorizontalAlignment="Left" Margin="440,14,0,0" VerticalAlignment="Top" Foreground="#FFEFD6D6"/>
+        <Button x:Name="show_leftBar" HorizontalAlignment="Left" Margin="739,666,0,0" VerticalAlignment="Top" Height="30" Width="35" FontSize="15" Content="&gt;&gt;" Foreground="#FFDAD5D5" FontWeight="Bold" VerticalContentAlignment="Top" >
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="100" Margin="50,581,0,0" VerticalAlignment="Top" Width="100" Source="/Img/customer-icon.bmp"/>
+        <Grid Cursor="Hand" Background="#FF3B403B" HorizontalAlignment="Left" Width="163" Height="737" VerticalAlignment="Top">
+            <Button x:Name="newChat_btn" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top" Height="30" Width="94"  FontSize="15" Content="+ New chat" Foreground="#FFF9DDDD" Background="#FF3B403B">
+                <Button.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.BorderBrush>
+            </Button>
+            <Button x:Name="show_leftBar_Copy" HorizontalAlignment="Left" Margin="115,19,0,0" VerticalAlignment="Top" Height="30" Width="34" FontSize="15" Content="&lt;" Foreground="#FFF7F0F0" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" FontWeight="Bold" >
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+                <Button.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.BorderBrush>
+            </Button>
+        </Grid>
+        <Label Content="User Name" HorizontalAlignment="Left" Margin="705,14,0,0" VerticalAlignment="Top" Foreground="#FFD4D1D1"/>
+        <Label Content="Find car parts by Reg" HorizontalAlignment="Left" Margin="13,588,0,0" VerticalAlignment="Top" Foreground="#FFEAD4D4"/>
+        <TextBox x:Name="reg_No_filld" CharacterCasing="Upper" Margin="21,623,0,0" TextWrapping="Wrap" Foreground="#FF0A0303" Background="#FFE2CD45" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold" HorizontalAlignment="Left" Width="102" Height="30" VerticalAlignment="Top"/>
+        <Button x:Name="Find_byReg_Copy2" Margin="33,672,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="70">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush ImageSource="/534-5340235_tequila-clipart.png" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

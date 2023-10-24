@@ -47,8 +47,6 @@ namespace CarService2
 
                 MessageBox.Show("New client added successfully!");
                 Close();
-                var window = new MainWindow();
-                window.Show();
             }
             catch (Exception ex)
             {
@@ -56,5 +54,10 @@ namespace CarService2
             }
         }
 
+        private void Delete_customer_Click(object sender, RoutedEventArgs e)
+        {
+            // to do
+           // _dbContext.Customers.Update();
+        }
     }
 }
