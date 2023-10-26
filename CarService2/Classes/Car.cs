@@ -34,16 +34,20 @@ namespace CarService2.Classes
         public string DateOfLastV5CIssued { get; set; } = "Pending";
         public int CustomerId { get; set; } = 1;
 
+
         public static string ToHtmlTable<T>(T obj)
         {
-            var html = "<table border='2' class='center'>";
-            html += "<tr><th style=\"width:220px\">PARAMETER</th><th style=\"width:220px\">RESULT</th></tr>";
+            var html = new StringBuilder("<table border='2' class='center'>");
+            html.Append("<tr><th style=\"width:220px\">PARAMETER</th><th style=\"width:220px\">RESULT</th></tr>");
             foreach (var prop in typeof(T).GetProperties())
             {
-                html += $"<tr><td>{prop.Name}</td><td>{prop.GetValue(obj)}</td></tr>";
+                if (prop.GetValue(obj) != null)
+                {
+                    html.Append($"<tr><td>{prop.Name}</td><td>{prop.GetValue(obj)}</td></tr>");
+                }
             }
-            html += "</table>";
-            return html;
+            html.Append("</table>");
+            return html.ToString();
         }
     }
 }
