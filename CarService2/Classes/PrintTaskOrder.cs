@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace CarService2.Classes
 {
-    public class PrintTaskLabel
+    public class PrintTaskOrder
+
     {
-        public PrintTaskLabel()
+        public PrintTaskOrder()
         {
 
         }
@@ -27,6 +28,8 @@ namespace CarService2.Classes
         public bool AirFilter { get; set; } = false;
         public bool CabinFilter { get; set; } = false;
         public bool ResetComputer { get; set; } = false;
+        public string? Maintenance { get; set; }
+        public string? MaintenanceDescription { get; set; }
 
         public static string ToHtmlTable<T>(T obj)
         {
@@ -34,7 +37,10 @@ namespace CarService2.Classes
             html += "<tr><th style=\"width:220px\">PARAMETER</th><th style=\"width:220px\">RESULT</th></tr>";
             foreach (var prop in typeof(T).GetProperties())
             {
-                html += $"<tr><td>{prop.Name}</td><td>{prop.GetValue(obj)}</td></tr>";
+                if (prop.GetValue(obj) != null)
+                {
+                    html += $"<tr><td>{prop.Name}</td><td>{prop.GetValue(obj)}</td></tr>";
+                }
             }
             html += "</table>";
             return html;

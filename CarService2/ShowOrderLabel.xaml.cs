@@ -20,12 +20,12 @@ namespace CarService2
     /// </summary>
     public partial class ShowOrderLabel : Window
     {
-        private PrintTaskLabel _label;
+        private PrintTaskOrder _label;
         public ShowOrderLabel()
         {
             InitializeComponent();
         }
-        public void DisplayOilLabel(string oilLabelHtml, PrintTaskLabel label)
+        public void DisplayOilLabel(string oilLabelHtml, PrintTaskOrder label)
         {
             _label = label;
             html_show_orderLabel_model.NavigateToString(oilLabelHtml);
@@ -39,7 +39,7 @@ namespace CarService2
 
         private void print_order_label_Click(object sender, RoutedEventArgs e)
         {
-           // var labelPrint = new (_label);
+            var labelPrint = new OrderA4Print(_label);
             Close();
         }
     }

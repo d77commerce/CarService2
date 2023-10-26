@@ -26,7 +26,7 @@ namespace CarService2.Classes
             return htmlContent;
         }
 
-        public static string ConvertTaskOrderToHtml(PrintTaskLabel label)
+        public static string ConvertTaskOrderToHtml(PrintTaskOrder label)
         {
             var labelPrint = label;
             // Generate the HTML content

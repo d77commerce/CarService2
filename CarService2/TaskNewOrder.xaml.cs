@@ -30,7 +30,7 @@ namespace CarService2
       
         public void chenge_order_status_btn_Click(object sender, RoutedEventArgs e)
         {
-            var orderLabel = new PrintTaskLabel()
+            var orderA4Print = new PrintTaskOrder()
             {
                 Mileage = Convert.ToInt32(mileage_textBox.Text),
                 EngineOil = engine_comboBox.SelectionBoxItem.ToString(),
@@ -46,20 +46,25 @@ namespace CarService2
                 DifferentialOilBrand = deff_producer_textBox.Text,
                 AirFilter = air_filter_check.IsChecked != null && air_filter_check.IsChecked.Value,
                 CabinFilter = cabine_filter_check.IsChecked != null && cabine_filter_check.IsChecked.Value,
-                ResetComputer = reset_computer_check.IsChecked != null && reset_computer_check.IsChecked.Value
+                ResetComputer = reset_computer_check.IsChecked != null && reset_computer_check.IsChecked.Value,
+                Maintenance = maintenance1.Text.ToString(),
+                MaintenanceDescription = maintenance1_TextBox.Text.ToString(),
             };
-            if (orderLabel.Mileage == 0)
+            if (orderA4Print.Mileage == 0)
             {
                 MessageBox.Show("Fill The Mileage !");
                 return;
             }
-            string result = TaskToHtml.ConvertTaskOrderToHtml(orderLabel);
+            string result = TaskToHtml.ConvertTaskOrderToHtml(orderA4Print);
             ShowOrderLabel orderLabelShow = new ShowOrderLabel();
-            orderLabelShow.DisplayOilLabel(result, orderLabel);
+            orderLabelShow.DisplayOilLabel(result, orderA4Print);
             orderLabelShow.Show();
             Close();
         }
 
-       
+        private void Maintenance1_TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

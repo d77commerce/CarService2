@@ -78,120 +78,23 @@
         <TextBox x:Name="customerName_textbox" HorizontalAlignment="Left" Margin="25,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="30" FontSize="18" FontWeight="Bold"/>
         <TextBox x:Name="mileage_textBox" HorizontalAlignment="Left" Margin="25,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="30" FontSize="18" FontWeight="Bold" Text="0" TextAlignment="Right" />
         <Label Content="mileage" HorizontalAlignment="Left" Margin="24,172,0,0" VerticalAlignment="Top" Foreground="Red"/>
-        <Label Content="Engine oil" HorizontalAlignment="Left" Margin="253,576,0,0" VerticalAlignment="Top" Height="46" Width="115" Foreground="#FF3C0C0C" FontSize="20"/>
-        <Label Content="Gear oil" HorizontalAlignment="Left" Margin="253,622,0,0" VerticalAlignment="Top" Height="46" Width="115" Foreground="#FF3C0C0C" FontSize="20"/>
-        <Label Content="Differential oil" HorizontalAlignment="Left" Margin="253,708,0,0" VerticalAlignment="Top" Height="46" Width="135" Foreground="#FF3C0C0C" FontSize="20"/>
-        <Label Content="Hydraulic oil" HorizontalAlignment="Left" Margin="253,666,0,0" VerticalAlignment="Top" Height="46" Width="130" Foreground="#FF3C0C0C" FontSize="20"/>
-        <ComboBox x:Name="engine_comboBox_Copy" HorizontalAlignment="Left" Margin="390,584,0,0" VerticalAlignment="Top" Width="120" Height="30" FontSize="16" AutomationProperties.HelpText="oil Specificatin">
-            <ComboBoxItem Content="15W40"/>
-            <ComboBoxItem Content="10W40"/>
-            <ComboBoxItem Content="5W40"/>
-            <ComboBoxItem Content="15W50"/>
-            <ComboBoxItem Content="10W50"/>
-            <ComboBoxItem Content="5W50"/>
-            <ComboBoxItem Content="10W30"/>
-            <ComboBoxItem Content="5W30"/>
-            <ComboBoxItem Content="0W40"/>
-            <ComboBoxItem Content="0W30"/>
-
-        </ComboBox>
-        <TextBox x:Name="Engine_producer_textBox_Copy" HorizontalAlignment="Left" Margin="527,584,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="483" Height="30" FontSize="18"/>
-        <ComboBox x:Name="gear_ComboBox_Copy" HorizontalAlignment="Left" Margin="390,628,0,0" VerticalAlignment="Top" Width="120" Height="30" FontSize="16" AutomationProperties.HelpText="oil Specificatin">
-            <ComboBoxItem Content="75W90"/>
-            <ComboBoxItem Content="80W90"/>
-            <ComboBoxItem Content="75W140"/>
-            <ComboBoxItem Content="MTF"/>
-            <ComboBoxItem Content="ATF"/>
-        </ComboBox>
-        <TextBox x:Name="gear_producer_textBox_Copy" HorizontalAlignment="Left" Margin="527,628,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="483" Height="30" FontSize="18"/>
-        <ComboBox x:Name="hydr_comboBox_Copy" HorizontalAlignment="Left" Margin="390,672,0,0" VerticalAlignment="Top" Width="120" Height="30" FontSize="16" AutomationProperties.HelpText="oil Specificatin" >
-            <ComboBoxItem Content="ISO 32"/>
-            <ComboBoxItem Content="ISO 46"/>
-            <ComboBoxItem Content="ISO 68"/>
-        </ComboBox>
-        <TextBox x:Name="hyd_producer_textBox_Copy" HorizontalAlignment="Left" Margin="527,672,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="483" Height="30" FontSize="18"/>
         <ComboBox x:Name="deffere_comboBox_Copy" HorizontalAlignment="Left" Margin="390,714,0,0" VerticalAlignment="Top" Width="120" Height="30" FontSize="16" AutomationProperties.HelpText="oil Specificatin">
             <ComboBoxItem Content="75W90"/>
             <ComboBoxItem Content="80W90"/>
             <ComboBoxItem Content="75W140"/>
         </ComboBox>
         <TextBox x:Name="deff_producer_textBox_Copy" HorizontalAlignment="Left" Margin="527,716,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="483" Height="30" FontSize="18"/>
-        <Label Content="Engine oil" HorizontalAlignment="Left" Margin="253,232,0,0" VerticalAlignment="Top" Height="46" Width="115" Foreground="#FF3C0C0C" FontSize="20"/>
-        <Label Content="Gear oil" HorizontalAlignment="Left" Margin="253,278,0,0" VerticalAlignment="Top" Height="46" Width="115" Foreground="#FF3C0C0C" FontSize="20"/>
-        <Label Content="Differential oil" HorizontalAlignment="Left" Margin="253,364,0,0" VerticalAlignment="Top" Height="46" Width="135" Foreground="#FF3C0C0C" FontSize="20"/>
-        <Label Content="Hydraulic oil" HorizontalAlignment="Left" Margin="253,322,0,0" VerticalAlignment="Top" Height="46" Width="130" Foreground="#FF3C0C0C" FontSize="20"/>
-        <ComboBox x:Name="engine_comboBox_Copy1" HorizontalAlignment="Left" Margin="390,240,0,0" VerticalAlignment="Top" Width="120" Height="30" FontSize="16" AutomationProperties.HelpText="oil Specificatin">
-            <ComboBoxItem Content="15W40"/>
-            <ComboBoxItem Content="10W40"/>
-            <ComboBoxItem Content="5W40"/>
-            <ComboBoxItem Content="15W50"/>
-            <ComboBoxItem Content="10W50"/>
-            <ComboBoxItem Content="5W50"/>
-            <ComboBoxItem Content="10W30"/>
-            <ComboBoxItem Content="5W30"/>
-            <ComboBoxItem Content="0W40"/>
-            <ComboBoxItem Content="0W30"/>
+        <Label Content="Task " HorizontalAlignment="Left" Margin="253,232,0,0" VerticalAlignment="Top" Height="46" Width="115" Foreground="#FF3C0C0C" FontSize="20"/>
+        <ComboBox x:Name="maintenance1" HorizontalAlignment="Left" Margin="390,240,0,0" VerticalAlignment="Top" Width="120" Height="30" FontSize="16" AutomationProperties.HelpText="oil Specificatin">
+            <ComboBoxItem Content="Basic Maintenance"/>
+            <ComboBoxItem Content="Repairs"/>
+            <ComboBoxItem Content="Vehicle Inspection and Emissions"/>
+            <ComboBoxItem Content="Towing and Emergency"/>
+            <ComboBoxItem Content="Computer Diagnostics"/>
 
         </ComboBox>
-        <TextBox x:Name="Engine_producer_textBox_Copy1" HorizontalAlignment="Left" Margin="527,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="483" Height="30" FontSize="18"/>
-        <ComboBox x:Name="gear_ComboBox_Copy1" HorizontalAlignment="Left" Margin="390,284,0,0" VerticalAlignment="Top" Width="120" Height="30" FontSize="16" AutomationProperties.HelpText="oil Specificatin">
-            <ComboBoxItem Content="75W90"/>
-            <ComboBoxItem Content="80W90"/>
-            <ComboBoxItem Content="75W140"/>
-            <ComboBoxItem Content="MTF"/>
-            <ComboBoxItem Content="ATF"/>
-        </ComboBox>
-        <TextBox x:Name="gear_producer_textBox_Copy1" HorizontalAlignment="Left" Margin="527,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="483" Height="30" FontSize="18"/>
-        <ComboBox x:Name="hydr_comboBox_Copy1" HorizontalAlignment="Left" Margin="390,328,0,0" VerticalAlignment="Top" Width="120" Height="30" FontSize="16" AutomationProperties.HelpText="oil Specificatin" >
-            <ComboBoxItem Content="ISO 32"/>
-            <ComboBoxItem Content="ISO 46"/>
-            <ComboBoxItem Content="ISO 68"/>
-        </ComboBox>
-        <TextBox x:Name="hyd_producer_textBox_Copy1" HorizontalAlignment="Left" Margin="527,328,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="483" Height="30" FontSize="18"/>
-        <ComboBox x:Name="deffere_comboBox_Copy1" HorizontalAlignment="Left" Margin="390,370,0,0" VerticalAlignment="Top" Width="120" Height="30" FontSize="16" AutomationProperties.HelpText="oil Specificatin">
-            <ComboBoxItem Content="75W90"/>
-            <ComboBoxItem Content="80W90"/>
-            <ComboBoxItem Content="75W140"/>
-        </ComboBox>
-        <TextBox x:Name="deff_producer_textBox_Copy1" HorizontalAlignment="Left" Margin="527,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="483" Height="30" FontSize="18"/>
-        <Label Content="Engine oil" HorizontalAlignment="Left" Margin="253,402,0,0" VerticalAlignment="Top" Height="46" Width="115" Foreground="#FF3C0C0C" FontSize="20"/>
-        <Label Content="Gear oil" HorizontalAlignment="Left" Margin="253,448,0,0" VerticalAlignment="Top" Height="46" Width="115" Foreground="#FF3C0C0C" FontSize="20"/>
-        <Label Content="Differential oil" HorizontalAlignment="Left" Margin="253,534,0,0" VerticalAlignment="Top" Height="46" Width="135" Foreground="#FF3C0C0C" FontSize="20"/>
-        <Label Content="Hydraulic oil" HorizontalAlignment="Left" Margin="253,492,0,0" VerticalAlignment="Top" Height="46" Width="130" Foreground="#FF3C0C0C" FontSize="20"/>
-        <ComboBox x:Name="engine_comboBox_Copy2" HorizontalAlignment="Left" Margin="391,410,0,0" VerticalAlignment="Top" Width="120" Height="30" FontSize="16" AutomationProperties.HelpText="oil Specificatin">
-            <ComboBoxItem Content="15W40"/>
-            <ComboBoxItem Content="10W40"/>
-            <ComboBoxItem Content="5W40"/>
-            <ComboBoxItem Content="15W50"/>
-            <ComboBoxItem Content="10W50"/>
-            <ComboBoxItem Content="5W50"/>
-            <ComboBoxItem Content="10W30"/>
-            <ComboBoxItem Content="5W30"/>
-            <ComboBoxItem Content="0W40"/>
-            <ComboBoxItem Content="0W30"/>
-
-        </ComboBox>
-        <TextBox x:Name="Engine_producer_textBox_Copy2" HorizontalAlignment="Left" Margin="527,410,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="483" Height="30" FontSize="18"/>
-        <ComboBox x:Name="gear_ComboBox_Copy2" HorizontalAlignment="Left" Margin="391,454,0,0" VerticalAlignment="Top" Width="120" Height="30" FontSize="16" AutomationProperties.HelpText="oil Specificatin">
-            <ComboBoxItem Content="75W90"/>
-            <ComboBoxItem Content="80W90"/>
-            <ComboBoxItem Content="75W140"/>
-            <ComboBoxItem Content="MTF"/>
-            <ComboBoxItem Content="ATF"/>
-        </ComboBox>
-        <TextBox x:Name="gear_producer_textBox_Copy2" HorizontalAlignment="Left" Margin="527,454,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="483" Height="30" FontSize="18"/>
-        <ComboBox x:Name="hydr_comboBox_Copy2" HorizontalAlignment="Left" Margin="391,498,0,0" VerticalAlignment="Top" Width="120" Height="30" FontSize="16" AutomationProperties.HelpText="oil Specificatin" >
-            <ComboBoxItem Content="ISO 32"/>
-            <ComboBoxItem Content="ISO 46"/>
-            <ComboBoxItem Content="ISO 68"/>
-        </ComboBox>
-        <TextBox x:Name="hyd_producer_textBox_Copy2" HorizontalAlignment="Left" Margin="527,498,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="483" Height="30" FontSize="18"/>
-        <ComboBox x:Name="deffere_comboBox_Copy2" HorizontalAlignment="Left" Margin="391,540,0,0" VerticalAlignment="Top" Width="120" Height="30" FontSize="16" AutomationProperties.HelpText="oil Specificatin">
-            <ComboBoxItem Content="75W90"/>
-            <ComboBoxItem Content="80W90"/>
-            <ComboBoxItem Content="75W140"/>
-        </ComboBox>
-        <TextBox x:Name="deff_producer_textBox_Copy2" HorizontalAlignment="Left" Margin="527,542,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="483" Height="30" FontSize="18"/>
+        <TextBox x:Name="maintenance1_TextBox" HorizontalAlignment="Left" Margin="270,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="740" Height="386" FontSize="18" TextChanged="Maintenance1_TextBox_TextChanged"/>
+        <Label Content="Description" HorizontalAlignment="Left" Margin="270,278,0,0" VerticalAlignment="Top"/>
 
 
 
