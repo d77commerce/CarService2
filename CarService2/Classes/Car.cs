@@ -34,7 +34,12 @@ namespace CarService2.Classes
         public string DateOfLastV5CIssued { get; set; } = "Pending";
         public int CustomerId { get; set; } = 1;
 
-
+        /// <summary>
+        /// Returns an HTML table of the car's parameters and their values.
+        /// </summary>
+        /// <typeparam name="T">The type of the car object.</typeparam>
+        /// <param name="obj">The car object.</param>
+        /// <returns>An HTML table of the car's parameters and their values.</returns>
         public static string ToHtmlTable<T>(T obj)
         {
             var html = new StringBuilder("<table border='2' class='center'>");
