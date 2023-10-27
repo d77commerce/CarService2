@@ -20,7 +20,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Button x:Name="Edit_customer" HorizontalAlignment="Left" Margin="595,304,0,0" VerticalAlignment="Top" Height="30" Width="180" Content="Edit" FontWeight="Bold" FontSize="20" Background="#FFF9F9F9">
+        <Button x:Name="Delete_customer" HorizontalAlignment="Left" Margin="595,342,0,0" VerticalAlignment="Top" Height="30" Width="180" Content="Close" FontWeight="Bold" FontSize="20" Background="#FFF9F9F9" Click="Delete_customer_Click">
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -28,7 +28,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="Delete_customer" HorizontalAlignment="Left" Margin="595,342,0,0" VerticalAlignment="Top" Height="30" Width="180" Content="Delete" FontWeight="Bold" FontSize="20" Background="#FFF9F9F9" Click="Delete_customer_Click">
+        <Button x:Name="Add_customer" HorizontalAlignment="Left" Margin="595,260,0,0" VerticalAlignment="Top" Height="30" Width="180" Content="Add" FontWeight="Bold" FontSize="20" Background="#FFF9F9F9" Click="Add_customer_Click">
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -36,24 +36,22 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="Add_customer" HorizontalAlignment="Left" Margin="595,264,0,0" VerticalAlignment="Top" Height="30" Width="180" Content="Add" FontWeight="Bold" FontSize="20" Background="#FFF9F9F9" Click="Add_customer_Click">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="White" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-        </Button>
-        <Label Content="ID No" HorizontalAlignment="Left" Margin="85,104,0,0" VerticalAlignment="Top" Height="45" Width="75" Foreground="#FF3C0C0C" FontSize="20"/>
         <Label Content="Full Name" HorizontalAlignment="Left" Margin="85,154,0,0" VerticalAlignment="Top" Height="45" Width="120" Foreground="#FF3C0C0C" FontSize="20"/>
         <Label Content="Company Name*" HorizontalAlignment="Left" Margin="85,315,0,0" VerticalAlignment="Top" Height="45" Width="170" Foreground="#FF3C0C0C" FontSize="20"/>
         <Label Content="Phone No" HorizontalAlignment="Left" Margin="85,212,0,0" VerticalAlignment="Top" Height="45" Width="120" Foreground="#FF3C0C0C" FontSize="20"/>
         <Label Content="Email" HorizontalAlignment="Left" Margin="85,264,0,0" VerticalAlignment="Top" Height="46" Width="120" Foreground="#FF3C0C0C" FontSize="20"/>
-        <TextBox x:Name="customer_Id" HorizontalAlignment="Left" Margin="280,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="30"/>
         <TextBox x:Name="customer_full_name" HorizontalAlignment="Left" Margin="280,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="30"/>
         <TextBox x:Name="customer_phone_No" HorizontalAlignment="Left" Margin="280,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="30"/>
         <TextBox x:Name="customer_email" HorizontalAlignment="Left" Margin="280,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="30"/>
         <TextBox x:Name="customer_company_name" HorizontalAlignment="Left" Margin="280,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="30"/>
+        <Button x:Name="update_customer" HorizontalAlignment="Left" Margin="595,303,0,0" VerticalAlignment="Top" Height="30" Width="180" Content="Update" FontWeight="Bold" FontSize="20" Background="#FFF9F9F9" Click="update_customer_Click" >
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
 
 
     </Grid>

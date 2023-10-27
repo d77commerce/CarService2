@@ -48,13 +48,12 @@ namespace CarService2
             var customer = new Cuctomer();
             var customerAdd = new CustomerAdd()
             {
-                Id = 1,
-                FullName = "John Doe",
-                PhoneNumber = "0777777",
-                Email = "john.doe@example.com",
-                CompanyName = "Onyx"
+                FullName = "",
+                PhoneNumber = "",
+                Email = "",
+                CompanyName = ""
             };
-            customer.customer_Id.Text = customerAdd.Id.ToString();
+            //customer.customer_Id.Text = customerAdd.Id.ToString();
             customer.customer_full_name.Text= customerAdd.FullName.ToString();
             customer.customer_phone_No.Text = customerAdd.PhoneNumber.ToString();
             customer.customer_email.Text = customerAdd.Email.ToString();
@@ -69,6 +68,7 @@ namespace CarService2
             changeOil.reg_car_textBox.Text = reg_car_textBox.Text;
             changeOil.customerName_textbox.Text = (string)customer_fullName_car.Content;
             changeOil.Show();
+            Close();
         }
 
         private void new_order_btn_Click(object sender, RoutedEventArgs e)
@@ -77,6 +77,7 @@ namespace CarService2
             order.reg_car_textBox.Text= reg_car_textBox.Text;
             order.customerName_textbox.Text=(string)customer_fullName_car.Content;
             order.Show();
+            Close();
         }
     }
 }

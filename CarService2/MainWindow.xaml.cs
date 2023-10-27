@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Threading;
 using CarService2.Classes;
 using CarService2.DB;
+using CarService2.pageView;
 using Microsoft.EntityFrameworkCore;
 using static ConvertToHtml;
 
@@ -38,7 +39,7 @@ namespace CarService2
         }
         private void Find_byReg_Click(object sender, RoutedEventArgs e)
         {
-            var regNo = reg_No_filld;
+            var regNo =  reg_No_filld;
             if (regNo != null)
             {
                 CarServiceNew.CarServiceByReg(regNo.Text);
@@ -153,7 +154,7 @@ namespace CarService2
                 // Create a new instance of the 'Cuctomer' window
                 Cuctomer cuctomer = new Cuctomer();
                 cuctomer.customer_full_name.Text = client.FullName;
-                cuctomer.customer_Id.Text = client.Id.ToString();
+               // cuctomer.customer_Id.Text = client.Id.ToString();
                 cuctomer.customer_email.Text = client.Email.ToString();
                 cuctomer.customer_phone_No.Text = client.PhoneNumber.ToString();
                 cuctomer.customer_company_name.Text = client.CompanyName.ToString();
@@ -222,6 +223,12 @@ namespace CarService2
         {
             WebBrowserAI browser = new WebBrowserAI();
             browser.Show();
+        }
+
+        private void Find_byReg_Copy2_Click(object sender, RoutedEventArgs e)
+        {
+           var AllOrders = new OrdersWindow();
+            AllOrders.Show();
         }
     }
 }

@@ -137,8 +137,22 @@ namespace CarService2.Migrations
                         {
                             Id = 1,
                             CustomerId = 1,
-                            DateTime = new DateTime(2023, 8, 12, 23, 16, 11, 84, DateTimeKind.Local).AddTicks(4856),
+                            DateTime = new DateTime(2023, 10, 27, 18, 38, 32, 984, DateTimeKind.Local).AddTicks(586),
                             RegNo = "11111"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CustomerId = 2,
+                            DateTime = new DateTime(2023, 10, 27, 18, 38, 32, 984, DateTimeKind.Local).AddTicks(599),
+                            RegNo = "22222"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CustomerId = 3,
+                            DateTime = new DateTime(2023, 10, 27, 18, 38, 32, 984, DateTimeKind.Local).AddTicks(607),
+                            RegNo = "33333"
                         });
                 });
 

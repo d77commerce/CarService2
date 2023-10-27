@@ -23,8 +23,8 @@
             </Rectangle.Fill>
         </Rectangle>
 
-        <Label Content="reg No" Margin="55,145,0,0" Foreground="#FF3C0C0C" FontSize="20" HorizontalAlignment="Left" Width="75" Height="45" VerticalAlignment="Top"/>
-        <TextBox x:Name="reg_No_filld" CharacterCasing="Upper" Margin="132,155,0,0" TextWrapping="Wrap" Foreground="#FF0A0303" Background="#FFE2CD45" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold" HorizontalAlignment="Left" Width="102" Height="30" VerticalAlignment="Top"/>
+        <Label Content="reg No" Margin="47,145,0,0" Foreground="#FF3C0C0C" FontSize="20" HorizontalAlignment="Left" Width="75" Height="45" VerticalAlignment="Top"/>
+        <TextBox x:Name="reg_No_filld" CharacterCasing="Upper" Margin="117,155,0,0" TextWrapping="Wrap" Foreground="#FF0A0303" Background="#FFE2CD45" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold" HorizontalAlignment="Left" Width="117" Height="30" VerticalAlignment="Top"/>
         <Button x:Name="Find_byReg" Margin="250,155,0,0" VerticalAlignment="Top" Height="30" Click="Find_byReg_Click" HorizontalAlignment="Left" Width="70">
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -76,7 +76,7 @@
         </Rectangle>
         <Label Content="Orders" Margin="50,236,0,0" Foreground="#FF3C0C0C" FontSize="20" Height="47" VerticalAlignment="Top" HorizontalAlignment="Left" Width="71"/>
         <DatePicker Margin="132,245,0,0" Background="#FFEEEEEE" HorizontalAlignment="Left" Width="102" Height="24" VerticalAlignment="Top"/>
-        <Button x:Name="Find_byReg_Copy2" Margin="250,239,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="70">
+        <Button x:Name="Find_byReg_Copy2" Margin="250,239,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="70" Click="Find_byReg_Copy2_Click">
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -108,7 +108,7 @@
             </Button.Background>
         </Button>
         <Label Content="  Full&#xA;history" Margin="55,309,0,0" Foreground="#FF3C0C0C" FontSize="13" HorizontalContentAlignment="Stretch" HorizontalAlignment="Left" Width="72" Height="45" VerticalAlignment="Top"/>
-        <TextBox x:Name="regNo_full_history" CharacterCasing="Upper" Margin="132,317,0,0" TextWrapping="Wrap" Foreground="#FF0A0303" Background="#FFE2CD45" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold" HorizontalAlignment="Left" Width="102" Height="30" VerticalAlignment="Top"/>
+        <TextBox x:Name="regNo_full_history" CharacterCasing="Upper" Margin="117,317,0,0" TextWrapping="Wrap" Foreground="#FF0A0303" Background="#FFE2CD45" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold" HorizontalAlignment="Left" Width="117" Height="30" VerticalAlignment="Top"/>
         <Label Content="This search is £ 10.00 ! ! !" Margin="117,341,549,70" FontSize="10" FontWeight="Bold" FontStyle="Italic" Foreground="#FFEF0B0B"/>
         <Button x:Name="setings_btn" Margin="681,22,0,0" OpacityMask="#FFFFF9F9" FontSize="20" Content="set" FontWeight="Bold" FontStyle="Italic" Background="White" HorizontalAlignment="Left" Width="70" Height="30" VerticalAlignment="Top"  >
             <Button.BorderBrush>

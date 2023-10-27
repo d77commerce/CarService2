@@ -33,6 +33,7 @@ namespace CarService2
         {
             try
             {
+                _dbContext.Database.OpenConnection();
                 var newCustomer = new CustomerDb()
                 {
                     FullName = customer_full_name.Text,
@@ -42,22 +43,85 @@ namespace CarService2
                     IsDeleted = false
                 };
 
+                if (string.IsNullOrEmpty(newCustomer.FullName) || newCustomer.FullName.Length < 7)
+                {
+                    MessageBox.Show("Please enter a full name!");
+                    return;
+                }
+                if (string.IsNullOrEmpty(newCustomer.PhoneNumber) || !newCustomer.PhoneNumber.All(char.IsDigit) || newCustomer.PhoneNumber.Length < 7)
+                {
+                    MessageBox.Show("Please enter a valid phone number with at least 7 digits!");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(newCustomer.Email) || !newCustomer.Email.Contains("@") || !newCustomer.Email.Contains("."))
+                {
+                    MessageBox.Show("Please enter a valid email!");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(newCustomer.CompanyName) || newCustomer.CompanyName.Length < 7)
+                {
+                    MessageBox.Show("Please enter a company name!");
+                    return;
+                }
+                if (_dbContext.Customers.Any(c => c.FullName == newCustomer.FullName))
+                {
+                    MessageBox.Show("This customer already exists!");
+                    return;
+                }
+
                 _dbContext.Customers.Add(newCustomer);
                 _dbContext.SaveChanges(); // Save changes to the database
 
-                MessageBox.Show("New client added successfully!");
+                MessageBox.Show("You've added a new client successfully!");
                 Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
+            finally
+            {
+                _dbContext.Database.CloseConnection();
+            }
         }
 
         private void Delete_customer_Click(object sender, RoutedEventArgs e)
         {
-            // to do
-           // _dbContext.Customers.Update();
+            Close();
+        }
+
+
+
+        private void update_customer_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                _dbContext.Database.OpenConnection();
+                var customer = _dbContext.Customers.FirstOrDefault(c => c.FullName == customer_full_name.Text);
+                if (customer == null)
+                {
+                    MessageBox.Show("This client does not exist!");
+                    return;
+                }
+                customer.FullName = customer_full_name.Text;
+                customer.CompanyName = customer_company_name.Text;
+                customer.PhoneNumber = customer_phone_No.Text;
+                customer.Email = customer_email.Text;
+                _dbContext.Customers.Update(customer);
+                _dbContext.SaveChanges(); // Save changes to the database
+                MessageBox.Show("You've updated the client successfully!");
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+            finally
+            {
+                _dbContext.Database.CloseConnection();
+            }
         }
     }
 }
