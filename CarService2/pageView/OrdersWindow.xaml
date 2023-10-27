@@ -7,7 +7,15 @@
         mc:Ignorable="d"
         Title="OrdersWindow" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="order_table" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="105,179,175,85" SelectionChanged="DataGrid_SelectionChanged"/>
+        <DataGrid x:Name="order_table" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="155,89,125,175" SelectionChanged="DataGrid_SelectionChanged"/>
+        <Button x:Name="Delete_customer" HorizontalAlignment="Left" Margin="595,342,0,0" VerticalAlignment="Top" Height="30" Width="180" Content="Close" FontWeight="Bold" FontSize="20" Background="#FFF9F9F9" Click="Close_Click">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
 
     </Grid>
 </Window>

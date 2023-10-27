@@ -55,8 +55,7 @@ namespace CarService2.pageView
                         Tasks = order.TaskUnits.Count().ToString(),
                         PhoneNo = customer.PhoneNumber,
                         Client = customer.FullName,
-                        DateTime = order.DateTime.ToString()
-
+                        DateTime = order.DateTime.ToString(),
                     });
                 }
                 order_table.ItemsSource = orders;
@@ -69,6 +68,11 @@ namespace CarService2.pageView
             {
                 _dbContext.Database.CloseConnection();
             }
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
