@@ -9,7 +9,7 @@ namespace CarService2.Classes
     public class ShowOrders
     {
         public int Id { get; set; }
-        public string? Tasks { get; set; }
+        public string? DataTasks { get; set; }
         public string? RegNo { get; set; }
         public string? Client { get; set; }
         public string? PhoneNo { get; set; }

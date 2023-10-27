@@ -52,7 +52,7 @@ namespace CarService2.pageView
                     {
                         Id = order.Id,
                         RegNo = order.RegNo,
-                        Tasks = order.TaskUnits.Count().ToString(),
+                        DataTasks = order.DataTasks,
                         PhoneNo = customer.PhoneNumber,
                         Client = customer.FullName,
                         DateTime = order.DateTime.ToString(),
