@@ -11,39 +11,39 @@
     <Grid>
         <Canvas Margin="0,-2,0,2">
 
-            <Border BorderBrush="Black" BorderThickness="1" Height="95" Canvas.Left="165" Canvas.Top="45" Width="408" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="95" Canvas.Left="157" Canvas.Top="45" Width="408" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
-            <Border BorderBrush="Black" BorderThickness="1" Height="58" Canvas.Left="20" Canvas.Top="584" Width="745" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Border BorderBrush="Black" BorderThickness="1" Height="160" Canvas.Left="20" Canvas.Top="402" Width="745" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Label Content="Date :" Width="40" HorizontalAlignment="Center" Canvas.Left="590" Canvas.Top="36" VerticalAlignment="Top"/>
-            <TextBox x:Name="date" TextWrapping="Wrap" Text="01.01.23" Width="70" TextChanged="date_TextChanged" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" Canvas.Left="649" Canvas.Top="41" VerticalAlignment="Top" Height="21"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="58" Canvas.Left="20" Canvas.Top="578" Width="741" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="160" Canvas.Left="20" Canvas.Top="394" Width="741" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Label Content="Date :" Width="40" HorizontalAlignment="Left" Canvas.Left="596" Canvas.Top="75" VerticalAlignment="Center"/>
+            <TextBox x:Name="date" TextWrapping="Wrap" Text="01.01.23" Width="70" TextChanged="date_TextChanged" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Canvas.Left="672" Canvas.Top="81" VerticalAlignment="Center" Height="20"/>
             <Canvas Height="26" Width="336" HorizontalAlignment="Left" Canvas.Left="20" Canvas.Top="433" VerticalAlignment="Top">
-                <Label Content="Engine oil :" Width="65" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="10"/>
+                <Label Content="Engine oil :" Width="65" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="12"/>
                 <Label Content="Brand" Width="48" HorizontalAlignment="Left" Canvas.Left="146" VerticalAlignment="Center"/>
                 <TextBox x:Name="brand_oil_textBox" TextWrapping="Wrap" Text="No" Width="88" HorizontalContentAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Canvas.Left="221" Canvas.Top="4" VerticalAlignment="Center" TextChanged="brand_oil_textBox_TextChanged"/>
                 <TextBox x:Name="oil_spec_textBox" TextWrapping="Wrap" Text="15W40" Width="55" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Canvas.Left="76" Canvas.Top="5" VerticalAlignment="Center" BorderBrush="{x:Null}" TextChanged="oil_spec_textBox_TextChanged"/>
 
             </Canvas>
             <Canvas Height="26" Width="319" HorizontalAlignment="Left" Canvas.Left="21" Canvas.Top="475" VerticalAlignment="Center">
-                <Label Content="Gear Box oil" Width="77" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="-2"/>
+                <Label Content="Gear Box oil" Width="77" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                 <TextBox x:Name="gearOil_spec_textBox" TextWrapping="Wrap" Text="No" Width="55" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Canvas.Left="77" Canvas.Top="4" VerticalAlignment="Center" BorderBrush="{x:Null}" TextChanged="gearOil_spec_textBox_TextChanged"/>
                 <Label Content="Brand" Width="43" HorizontalAlignment="Left" Canvas.Left="146" VerticalAlignment="Center"/>
                 <TextBox x:Name="brand_gearOil_textBox" TextWrapping="Wrap" Text="No" Width="88" HorizontalContentAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Canvas.Left="221" Canvas.Top="4" VerticalAlignment="Center" TextChanged="brand_gearOil_textBox_TextChanged"/>
 
             </Canvas>
             <Canvas Height="26" Width="329" HorizontalAlignment="Center" Canvas.Left="27" Canvas.Top="518" VerticalAlignment="Top">
-                <Label Content="Steering oil" Width="72" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="-2"/>
+                <Label Content="Steering oil" Width="72" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                 <Label Content="Brand" Width="42" HorizontalAlignment="Left" Canvas.Left="140" VerticalAlignment="Center"/>
                 <TextBox x:Name="brand_steeringOil_textBox" TextWrapping="Wrap" Text="No" Width="88" HorizontalContentAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Canvas.Left="215" Canvas.Top="4" VerticalAlignment="Center" TextChanged="brand_steeringOil_textBox_TextChanged"/>
                 <TextBox x:Name="SteeringOil_spec_textBox" TextWrapping="Wrap" Text="No" Width="55" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Canvas.Left="72" Canvas.Top="4" VerticalAlignment="Center" BorderBrush="{x:Null}" TextChanged="SteeringOil_spec_textBox_TextChanged"/>
 
             </Canvas>
             <Label Content="Oil filter" Width="60" HorizontalAlignment="Left" Canvas.Left="360" Canvas.Top="495" VerticalAlignment="Center"/>
-            <Label Content="Air filter" Width="60" HorizontalAlignment="Left" Canvas.Left="48" Canvas.Top="599" VerticalAlignment="Top"/>
-            <Label Content="Cabin filter" Width="67" HorizontalAlignment="Left" Canvas.Left="250" Canvas.Top="599" VerticalAlignment="Top"/>
+            <Label Content="Air filter" Width="60" HorizontalAlignment="Left" Canvas.Left="69" Canvas.Top="599" VerticalAlignment="Center"/>
+            <Label Content="Cabin filter" Width="67" HorizontalAlignment="Left" Canvas.Left="265" Canvas.Top="599" VerticalAlignment="Center"/>
             <TextBox x:Name="oilFilter_texBox" TextWrapping="Wrap" Text="No" FontWeight="Bold" HorizontalContentAlignment="Center" Height="18" Canvas.Left="417" Canvas.Top="500" Width="55" BorderBrush="{x:Null}" TextChanged="oilFilter_texBox_TextChanged" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBox x:Name="cabinFilter_texBox" TextWrapping="Wrap" Text="No" FontWeight="Bold" HorizontalContentAlignment="Center" Height="18" Canvas.Left="360" Canvas.Top="603" Width="55" BorderBrush="{x:Null}" TextChanged="cabinFilter_texBox_TextChanged" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <TextBox x:Name="airFilter_texBox" TextWrapping="Wrap" Text="No" FontWeight="Bold" HorizontalContentAlignment="Center" Height="18" Canvas.Left="114" Canvas.Top="603" Width="56" BorderBrush="{x:Null}" TextChanged="airFilter_texBox_TextChanged" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox x:Name="cabinFilter_texBox" TextWrapping="Wrap" Text="No" FontWeight="Bold" HorizontalContentAlignment="Center" Height="18" Canvas.Left="370" Canvas.Top="603" Width="55" BorderBrush="{x:Null}" TextChanged="cabinFilter_texBox_TextChanged" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="airFilter_texBox" TextWrapping="Wrap" Text="No" FontWeight="Bold" HorizontalContentAlignment="Center" Height="18" Canvas.Left="147" Canvas.Top="603" Width="56" BorderBrush="{x:Null}" TextChanged="airFilter_texBox_TextChanged" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Label Content="Next change due :" FontSize="16" Width="140" HorizontalAlignment="Left" Canvas.Left="370" Canvas.Top="430" VerticalAlignment="Top"/>
             <Label Content="Powered by Artmillenium.co.uk" Width="185" Background="White" HorizontalAlignment="Left" Canvas.Left="545" Canvas.Top="1073" VerticalAlignment="Top" Height="27"/>
             <TextBox x:Name="mileage_textBox" TextWrapping="Wrap" Text="63000" Width="98" FontSize="19" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Canvas.Left="517" Canvas.Top="434" VerticalAlignment="Center" BorderBrush="{x:Null}" TextChanged="mileage_textBox_TextChanged"/>
@@ -52,19 +52,26 @@
             <Label Content="Mileas" Canvas.Left="615" Canvas.Top="433" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <Label Content="Restet sys" Width="65" Canvas.Left="350" Canvas.Top="470" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <TextBox x:Name="reset_texBox" TextWrapping="Wrap" Text="No" FontWeight="Bold" HorizontalContentAlignment="Center" Height="18" Canvas.Left="416" Canvas.Top="474" Width="56" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center" TextChanged="reset_texBox_TextChanged"/>
-            <Label Content="OIL" Canvas.Left="20" Canvas.Top="379" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Label Content="Filters" Canvas.Left="22" Canvas.Top="560" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Label Content="OIL" Canvas.Left="25" Canvas.Top="402" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Label Content="Filters" Canvas.Left="22" Canvas.Top="581" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <Image Height="100" Canvas.Left="36" Canvas.Top="40" Width="100" Source="/PhotoRoom_20200618_144239_second-removebg-preview.png" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Label Content="Order No:" Canvas.Left="167" Canvas.Top="50" Height="76" Width="225" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Label Content="340012" Canvas.Left="383" Canvas.Top="52" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Top" Width="175" FontWeight="Bold"/>
-            <Label Content="Mechanic Name : " Height="40" Canvas.Left="388" Canvas.Top="337" Width="280" FontSize="24"/>
-            <Label Content="Task:" Canvas.Left="22" Canvas.Top="632" HorizontalAlignment="Left" VerticalAlignment="Center" Width="59" FontSize="24"/>
-            <TextBox x:Name="maintenance_textbox" Canvas.Left="88" TextWrapping="Wrap" Text="maintenance" Canvas.Top="641" Width="590" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" TextChanged="maintenance_textbox_TextChanged" BorderBrush="{x:Null}" />
-            <TextBox x:Name="description_textbox" Canvas.Left="20" TextWrapping="Wrap" Text="TextBox" Canvas.Top="673" Width="743" Height="380" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18" TextChanged="description_textbox_TextChanged" BorderBrush="#FF0E0909">
+            <Label Content="Order No:" Canvas.Left="167" Canvas.Top="56" Height="76" Width="163" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Mechanic Name : " Height="40" Canvas.Left="20" Canvas.Top="323" Width="280" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Task:" Canvas.Left="41" Canvas.Top="637" HorizontalAlignment="Center" VerticalAlignment="Top" Width="59" FontSize="24"/>
+            <TextBox x:Name="description_textbox" Canvas.Left="24" TextWrapping="Wrap" Text="TextBox" Canvas.Top="685" Width="737" Height="368" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18" TextChanged="description_textbox_TextChanged" Padding="11,0,5,0" BorderBrush="{x:Null}">
                 <TextBox.CaretBrush>
                     <ImageBrush/>
                 </TextBox.CaretBrush>
             </TextBox>
+            <Label Content="Reg No :" Canvas.Left="582" Canvas.Top="114" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="RegNo_textBox" Canvas.Left="642" TextWrapping="Wrap" Text="WF15WNR" Canvas.Top="114" Width="125" Height="26" HorizontalAlignment="Left" VerticalAlignment="Center"  FontSize="18" FontWeight="Bold" Background="#FFDCCC19" TextAlignment="Center" TextChanged="RegNo_textBox_TextChanged"/>
+            <Label Content="Owner :" Canvas.Left="459" Canvas.Top="204" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="textBox_Owner_Commpany" Canvas.Left="542" TextWrapping="Wrap" Text="Oniqxs ltd" Canvas.Top="204" Width="238" HorizontalAlignment="Center" VerticalAlignment="Top"  FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}" TextChanged="textBox_Owner_Commpany_TextChanged"/>
+            <Label Content="Mileas :" Canvas.Left="586" Canvas.Top="151" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="textBox_milesStart" Canvas.Left="655" TextWrapping="Wrap" Text="10230" Canvas.Top="157" Width="120" HorizontalAlignment="Center" VerticalAlignment="Top" BorderBrush="{x:Null}" TextChanged="textBox_milesStart_TextChanged" />
+            <TextBox x:Name="maintenance_textBox" Canvas.Left="115" TextWrapping="Wrap" Text="Maintenance" Canvas.Top="649" Width="329" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" TextChanged="maintenance_textBox_TextChanged" BorderBrush="{x:Null}" FontWeight="Bold" VerticalContentAlignment="Center" Padding="14,0,0,0"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="389" Canvas.Left="22" Canvas.Top="679" Width="739"/>
+            <TextBox x:Name="orderNo_textBox" Canvas.Left="330" TextWrapping="Wrap" Text="23110656789" Canvas.Top="59" Width="212" Height="58" FontSize="40" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="Black" TextChanged="orderNo_textBox_TextChanged"/>
 
 
         </Canvas>

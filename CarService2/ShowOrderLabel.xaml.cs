@@ -1,17 +1,10 @@
 ﻿using CarService2.Classes;
+using CarService2.DB;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using CarService2.DB;
 
 namespace CarService2
 {
@@ -20,9 +13,11 @@ namespace CarService2
     /// </summary>
     public partial class ShowOrderLabel : Window
     {
+        private static CarContext dbContext = new CarContext(new DbContextOptions<CarContext>());
         private PrintTaskOrder _label;
         public ShowOrderLabel()
         {
+
             InitializeComponent();
         }
         public void DisplayOilLabel(string oilLabelHtml, PrintTaskOrder label)
@@ -39,7 +34,31 @@ namespace CarService2
 
         private void print_order_label_Click(object sender, RoutedEventArgs e)
         {
+            string json = JsonConvert.SerializeObject(_label, Formatting.Indented);
+            
+
+            var orderNo = _label.OrderNo;
+            var regNo = _label.RegNo;
+            var dataTasks = json;
+            var customerId = _label.CustomerId;
+
+            var order = new OrderOfTaskDb()
+            {
+                RegNo = regNo,
+                OrderNo = Convert.ToInt32(orderNo),
+                DataTasks = dataTasks,
+                CustomerId = Convert.ToInt32(customerId),
+
+            };
+            dbContext.Database.OpenConnection();
+            dbContext.OrdersDbs.Add(order);
+            dbContext.SaveChanges();
+            dbContext.Database.CloseConnection();
+
+            // Display the JSON string in a message box
+            MessageBox.Show(json);
             var labelPrint = new OrderA4Print(_label);
+
             Close();
         }
     }

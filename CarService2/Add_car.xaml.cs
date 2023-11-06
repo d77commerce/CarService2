@@ -22,24 +22,26 @@ namespace CarService2
     public partial class Add_car : Window
     {
         private DvlaCarModel dvlaCarModel;
+        private Count _count;
         public Add_car()
         {
             InitializeComponent();
             dvlaCarModel = new DvlaCarModel();
+            _count = new Count();
 
         }
 
 
         private async void Full_info_Click(object sender, RoutedEventArgs e)
-        {   
+        {
             string regNo = reg_car_textBox.Text;
             string response = await dvlaCarModel.MakeApiRequest(regNo);
             var htmlDvlaModel = ConvertToHtml.ConvertJsonToHtml(response, regNo);
 
             ShowDvlaModel dvla = new ShowDvlaModel();
-               dvla.Show();
+            dvla.Show();
             dvla.Display(htmlDvlaModel);
-          
+
 
         }
 
@@ -54,7 +56,7 @@ namespace CarService2
                 CompanyName = ""
             };
             //customer.customer_Id.Text = customerAdd.Id.ToString();
-            customer.customer_full_name.Text= customerAdd.FullName.ToString();
+            customer.customer_full_name.Text = customerAdd.FullName.ToString();
             customer.customer_phone_No.Text = customerAdd.PhoneNumber.ToString();
             customer.customer_email.Text = customerAdd.Email.ToString();
             customer.customer_company_name.Text = customerAdd.CompanyName.ToString();
@@ -62,7 +64,7 @@ namespace CarService2
         }
 
         private void oil_task_btn_Click(object sender, RoutedEventArgs e)
-        { 
+        {
 
             TaskChangeOil changeOil = new TaskChangeOil();
             changeOil.reg_car_textBox.Text = reg_car_textBox.Text;
@@ -73,11 +75,17 @@ namespace CarService2
 
         private void new_order_btn_Click(object sender, RoutedEventArgs e)
         {
+            var num = _count.GenerateUniqueOrderNumber();
+
             TaskNewOrder order = new TaskNewOrder();
-            order.reg_car_textBox.Text= reg_car_textBox.Text;
-            order.customerName_textbox.Text=(string)customer_fullName_car.Content;
+            order.reg_car_textBox.Text = reg_car_textBox.Text;
+            order.customerName_textbox.Text = (string)customer_fullName_car.Content;
+            order.OrderNo_textBox.Text = num;
+            order.CustomerId_textBox.Text = (string)customerID_label.Content;
             order.Show();
             Close();
         }
+
+        
     }
 }

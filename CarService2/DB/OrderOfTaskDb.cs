@@ -10,7 +10,8 @@ namespace CarService2.DB
         public int Id { get; set; }
 
         public string RegNo { get; set; } = null!;
-       // public virtual IEnumerable<TaskDb> TaskUnits { get; set; } = new List<TaskDb>();
+        // public virtual IEnumerable<TaskDb> TaskUnits { get; set; } = new List<TaskDb>();
+        public int OrderNo { get; set; }
         public string? DataTasks { get; set; }
         public int CustomerId { get; set; }
         [ForeignKey(nameof(CustomerId))]

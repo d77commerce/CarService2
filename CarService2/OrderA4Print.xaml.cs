@@ -108,15 +108,36 @@ namespace CarService2
             if (label.ResetComputer == true) reset_texBox.Text = "YES";
         }
 
-        private void maintenance_textbox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            maintenance_textbox.Text = label.Maintenance;
-        }
+
 
         private void description_textbox_TextChanged(object sender, TextChangedEventArgs e)
         {
             description_textbox.Text = label.MaintenanceDescription;
         }
+
+        private void textBox_Owner_Commpany_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            textBox_Owner_Commpany.Text =label.OwnerCommpanyName;
+        }
+
+        private void textBox_milesStart_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            textBox_milesStart.Text = label.Mileage.ToString();
+        }
+
+        private void RegNo_textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            RegNo_textBox.Text = label.RegNo;
+        }
+
+        private void maintenance_textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            maintenance_textBox.Text = label.Maintenance;
+        }
+
+        private void orderNo_textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            orderNo_textBox.Text = label.OrderNo.ToString();
+        }
     }
 }
-

@@ -58,6 +58,7 @@ namespace CarService2.Classes
                 var customerName = dbContext.Customers.FirstOrDefault(c => c.Id == foundCar.CustomerId)?.CompanyName.ToString();
                 
                     addCar.customer_fullName_car.Content = customerName;
+                addCar.customerID_label.Content = foundCar.CustomerId.ToString();
                     //foundCar.Customer.CompanyName.ToString();    // customer.FullName;
                     addCar.Show();
             }

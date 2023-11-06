@@ -5,10 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CarService2.pageView"
         mc:Ignorable="d"
-        Title="OrdersWindow" Height="450" Width="800">
-    <Grid>
-        <DataGrid x:Name="order_table" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="155,89,125,175" SelectionChanged="DataGrid_SelectionChanged"/>
-        <Button x:Name="Delete_customer" HorizontalAlignment="Left" Margin="595,342,0,0" VerticalAlignment="Top" Height="30" Width="180" Content="Close" FontWeight="Bold" FontSize="20" Background="#FFF9F9F9" Click="Close_Click">
+        Title="OrdersWindow" Height="610" Width="930">
+    <Grid Margin="0,0,0,4">
+        <DataGrid Name="order_table" AutoGenerateColumns="False" Margin="55,106,20,96">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Order ID" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="Registration No" Binding="{Binding RegNo}" />
+                <DataGridTextColumn Header="Phone No" Binding="{Binding PhoneNo}" />
+                <DataGridTextColumn Header="Client" Binding="{Binding Client}" />
+                <DataGridTextColumn Header="Date and Time" Binding="{Binding DateTime}" />
+                <DataGridTextColumn Header="Order No" Binding="{Binding OrderNo}" />
+                <!-- Add a button column -->
+                <DataGridTemplateColumn Header="DataTasks">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="DataTasks" Click="DataTasksButton_Click" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button x:Name="Delete_customer" HorizontalAlignment="Left" Margin="705,534,0,0" VerticalAlignment="Top" Height="30" Width="180" Content="Close" FontWeight="Bold" FontSize="20" Background="#FFF9F9F9" Click="Close_Click">
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>

@@ -30,6 +30,11 @@ namespace CarService2.Classes
         public bool ResetComputer { get; set; } = false;
         public string? Maintenance { get; set; }
         public string? MaintenanceDescription { get; set; }
+        public string? OwnerCommpanyName { get; set; }
+        public string? CustomerId { get; set; }
+        public string RegNo  { get; set; } = "";
+        public string OrderNo { get; set; } = "";
+
 
         public static string ToHtmlTable<T>(T obj)
         {

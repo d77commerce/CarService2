@@ -65,7 +65,7 @@
         <TextBox x:Name="deff_producer_textBox" HorizontalAlignment="Left" Margin="527,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="30" FontSize="18"/>
         <CheckBox x:Name="air_filter_check" Content="Air Filter" HorizontalAlignment="Left" Margin="672,88,0,0" VerticalAlignment="Top" FontSize="18" Width="86"/>
         <CheckBox x:Name="cabine_filter_check" Content="Cabine Filter" HorizontalAlignment="Left" Margin="903,66,0,0" VerticalAlignment="Top" FontSize="18" Width="122"/>
-        <TextBox HorizontalAlignment="Left" Margin="24,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="30" FontSize="18"/>
+        <TextBox x:Name="OrderNo_textBox" HorizontalAlignment="Left" Margin="24,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="30" FontSize="18" Text="12005" HorizontalContentAlignment="Center"/>
         <Label Content="Order / Task No :" HorizontalAlignment="Left" Height="28" Margin="24,203,0,0" VerticalAlignment="Top" Width="105"/>
         <Button x:Name="chenge_order_status_btn" HorizontalAlignment="Left" Margin="836,704,0,0" VerticalAlignment="Top" Height="30" Width="180" Content="Save" FontWeight="Bold" FontSize="20" Background="#FFF9F9F9" Click="chenge_order_status_btn_Click" >
             <Button.BorderBrush>
@@ -96,6 +96,7 @@
         <TextBox x:Name="maintenance1_TextBox" HorizontalAlignment="Left" Margin="270,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="740" Height="285" FontSize="18" TextChanged="Maintenance1_TextBox_TextChanged"/>
         <Label Content="Description" HorizontalAlignment="Left" Margin="270,278,0,0" VerticalAlignment="Top"/>
         <Label Content="Owner" HorizontalAlignment="Left" Margin="25,77,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="CustomerId_textBox" HorizontalAlignment="Left" Margin="101,84,0,0" TextWrapping="Wrap" Text="86787" VerticalAlignment="Top" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="8"/>
 
 
 

@@ -52,10 +52,11 @@ namespace CarService2.pageView
                     {
                         Id = order.Id,
                         RegNo = order.RegNo,
-                        DataTasks = order.DataTasks,
+                        DataTasks =order.DataTasks,
                         PhoneNo = customer.PhoneNumber,
                         Client = customer.FullName,
                         DateTime = order.DateTime.ToString(),
+                        OrderNo = order.OrderNo.ToString(),
                     });
                 }
                 order_table.ItemsSource = orders;
@@ -67,6 +68,29 @@ namespace CarService2.pageView
             finally
             {
                 _dbContext.Database.CloseConnection();
+            }
+        }
+
+        private void DataTasksButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Handle the button click event for DataTasks
+            // You can access the selected item in the DataGrid here
+            if (order_table.SelectedItem is ShowOrders selectedOrder)
+            {
+                // You can use 'selectedOrder' to access the data for the selected row
+
+                // Implement your logic here
+                MessageBox.Show(selectedOrder.DataTasks);
+
+           PrintTaskOrder json = new PrintTaskOrder();
+                json = Newtonsoft.Json.JsonConvert.DeserializeObject<PrintTaskOrder>(selectedOrder.DataTasks);
+                 
+                //MessageBox.Show(json.ToString());
+                //var label = new PrintTaskOrder();
+                //label.Mileage = SelectedOrder;
+
+                              var print = new OrderA4Print(json);
+                     
             }
         }
 

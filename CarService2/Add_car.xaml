@@ -93,6 +93,7 @@
             <Label x:Name="customer_fullName_car" Content="" HorizontalAlignment="Left" Margin="206,70,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Width="144"/>
             <TextBox x:Name="engine_textBox" HorizontalAlignment="Left" Margin="432,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" Height="30" Foreground="#FF0A0303" Background="#FFF9DFDF" FontSize="20" BorderBrush="#FF6D8EEF" FontWeight="Bold" IsReadOnly ="true"/>
             <Label Content="Engine cm3" HorizontalAlignment="Left" Margin="322,201,0,0" VerticalAlignment="Top" Height="46" Width="119" Foreground="#FF3C0C0C" FontSize="20"/>
+            <Label x:Name="customerID_label" Content="23434" HorizontalAlignment="Left" Margin="458,68,0,0" VerticalAlignment="Top" FontSize="8" Width="57"/>
 
         </Grid>
 

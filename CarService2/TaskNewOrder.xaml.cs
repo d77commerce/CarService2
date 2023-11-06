@@ -49,7 +49,11 @@ namespace CarService2
                 ResetComputer = reset_computer_check.IsChecked != null && reset_computer_check.IsChecked.Value,
                 Maintenance = maintenance1.Text.ToString(),
                 MaintenanceDescription = maintenance1_TextBox.Text.ToString(),
-            };
+                OwnerCommpanyName = customerName_textbox.Text.ToString(),
+                RegNo = reg_car_textBox.Text.ToString(),
+                OrderNo =  OrderNo_textBox.Text.ToString(),
+                CustomerId = CustomerId_textBox.Text.ToString(),
+            };  
             if (orderA4Print.Mileage == 0)
             {
                 MessageBox.Show("Fill The Mileage !");

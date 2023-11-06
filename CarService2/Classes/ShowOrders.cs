@@ -14,5 +14,6 @@ namespace CarService2.Classes
         public string? Client { get; set; }
         public string? PhoneNo { get; set; }
         public string? DateTime { get; set; }
+        public string? OrderNo { get; set; }
     }
 }
