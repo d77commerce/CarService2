@@ -33,7 +33,7 @@ To ensure your team makes the most of this system, I offer training sessions to 
 
 ## Get Started
 
-To explore the project , visit the [GitHub Repository]([OneDrive](https://1drv.ms/u/s!AkQhqXpr4EPXh65TT3lpIG0zN1VGUA?e=ZZde12)).
+To explore the project , visit the [OneDrive](https://1drv.ms/u/s!AkQhqXpr4EPXh65TT3lpIG0zN1VGUA?e=ZZde12).
 
 ## Conclusion
 
