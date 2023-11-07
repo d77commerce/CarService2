@@ -41,4 +41,4 @@ This project is a testament to my expertise in WPF, API integration, and databas
 
 Thank you for considering this project!
 
-*[Your Name]*
+Danail Tsachev
