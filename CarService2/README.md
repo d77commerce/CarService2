@@ -33,7 +33,7 @@ To ensure your team makes the most of this system, I offer training sessions to 
 
 ## Get Started
 
-To explore the project and its code, visit the [GitHub Repository](https://github.com/d77commerce/CarService2).
+To explore the project , visit the [OneDrive](https://1drv.ms/u/s!AkQhqXpr4EPXh65TT3lpIG0zN1VGUA?e=ZZde12).
 
 ## Conclusion
 
@@ -41,4 +41,4 @@ This project is a testament to my expertise in WPF, API integration, and databas
 
 Thank you for considering this project!
 
-*[Your Name]*
+Danail Tsachev

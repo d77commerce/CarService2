@@ -25,7 +25,7 @@ namespace CarService2.Classes
             httpClient.DefaultRequestHeaders.Accept.Clear();
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             // Set your API key here (replace "REPLACE WITH YOUR API KEY" with your actual API key)
-            httpClient.DefaultRequestHeaders.Add("x-api-key", "KxClq64nPc306JlOC6auj9sDVlE8cn9V63sQljDN");
+            httpClient.DefaultRequestHeaders.Add("x-api-key", "");
         }
 
         public async Task<string> MakeApiRequest(string registrationNumber)
